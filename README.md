@@ -10,6 +10,7 @@
 - git
 - PHP Storm
 - Visual studio code
+- PHPMyAdmin
 
 ## Liens utiles
-[sujet](https://community-sciences.unilim.fr/pluginfile.php/69703/mod_resource/content/2/Projet__1.pdf)
+[Sujet](https://community-sciences.unilim.fr/pluginfile.php/69703/mod_resource/content/2/Projet__1.pdf)
