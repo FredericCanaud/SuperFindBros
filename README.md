@@ -2,7 +2,7 @@
 
 ## Membres du projet
 - Thomas CAMPREDON
-- Frederic CANAUX
+- Frederic CANAUD
 
 ## Utilitaires
 - php
@@ -12,5 +12,11 @@
 - Visual studio code
 - PHPMyAdmin
 
+## Sujet
+Sur la base du sujet 1 proposé dans le cadre du projet de technoWeb, nous avons choisi de modifier un peu l'énoncé en partant sur un site de rencontre e-sportive.
+Le nom du site sera SuperFindBros.
+
+
+
 ## Liens utiles
-[Sujet](https://community-sciences.unilim.fr/pluginfile.php/69703/mod_resource/content/2/Projet__1.pdf)
+[Sujet de base](https://community-sciences.unilim.fr/pluginfile.php/69703/mod_resource/content/2/Projet__1.pdf)
