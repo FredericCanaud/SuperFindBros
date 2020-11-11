@@ -10,6 +10,8 @@
     $connec = $_SESSION['estConnecte'];
 
     // connec == 1 <=> estConnecté
+    // connec == 2 <=> estAdmin
+    // connec == 0 <=> estPasConnecté
 
     switch ($page) {
 

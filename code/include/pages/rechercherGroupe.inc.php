@@ -1,1 +1,1 @@
-// ici la page qui permet de rechercher un joueur selon des critères comme un jeu ou une moyenne d'age(lol)
+// ici la page qui permet de rechercher et de rejoindre un groupe selon des critères comme un jeu ou une moyenne d'age(lol)

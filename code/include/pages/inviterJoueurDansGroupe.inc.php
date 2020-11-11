@@ -1,0 +1,1 @@
+// ici on peut inviter un joueur à rejoindre un groupe dont on fait partie

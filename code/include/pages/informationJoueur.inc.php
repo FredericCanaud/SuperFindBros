@@ -1,0 +1,1 @@
+// ici la page pour avoir le profil d'un joueur

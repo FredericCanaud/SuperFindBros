@@ -1,0 +1,1 @@
+// ici la page pour voir des informations sur un groupe (on y accède depuis rechercherGroupe)
