@@ -3,22 +3,29 @@
     if (!empty($_GET["page"])){
         $page=$_GET["page"];}
     else
-    {$page=0;
+    {
+        $page=0;
     }
 
-    //$connec = $_SESSION['estConnecte'];
+    $connec = $_SESSION['estConnecte'];
+
+    // connec == 1 <=> estConnecté
+
     switch ($page) {
-//
-// Personnes
-//
+
         case 0:
-            // inclure ici la page d'accueil
-            include_once('pages/index.php');
+            if ($connec==1||$connec==2) {
+                // inclure ici la page d'accueil des connectés
+                include_once('pages/accueilConnecte.inc.php');
+            }else{
+                // inclure ici la page d'accueil des trépanés
+                include_once('pages/accueil.inc.php');
+            }
             break;
 
         case 1:
             // inclure ici la page de connexion
-            include_once("pages/connexion.php");
+            include_once("pages/connexion.inc.php");
             break;
 
         /*case 2:
@@ -108,7 +115,7 @@
             break;
 */
 
-        default : 	include_once('pages/index.php');
+        default : 	include_once('pages/accueil.inc.php');
     }
 
     ?>

@@ -1,15 +1,15 @@
 <?php
-   /* session_start();
+    session_start();
     if (empty($_SESSION['estConnecte'])){
         $_SESSION['estConnecte']=0;
     }
-    if (empty($_SESSION['userId'])){
+    /*if (empty($_SESSION['userId'])){
         $_SESSION['userId']=-1;
     }
     if (empty($_SESSION['etu'])){
         $_SESSION['etu']=false;
-    }
-*/
+    }*/
+
 ?>
 
 <!doctype html>
@@ -17,7 +17,7 @@
 <head>
     <meta charset="utf-8">
     <?php
-    // $title = "Bienvenue sur le site du bétisier de l'IUT.";
+    // $title = "A definire";
     ?>
     <!--<title>
         <?php //echo $title ?>
