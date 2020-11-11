@@ -13,14 +13,23 @@ USE `superFindBros` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `superFindBros`.`personne` (
   `per_num` INT NOT NULL AUTO_INCREMENT,
-  `per_prenom` VARCHAR(45) NOT NULL,
-  `per_nom` VARCHAR(45) NOT NULL,
+  `per_prenom` VARCHAR(45),
+  `per_nom` VARCHAR(45),
+  'per_age' INT(3),
   `per_mail` VARCHAR(80) NOT NULL,
   `per_pseudo` VARCHAR(45) NOT NULL,
   `per_mdp` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`per_num`))
 ENGINE = InnoDB;
 
+INSERT INTO `personne` (`per_num`, `per_prenom`, `per_nom`, `per_age`, `per_mail`, 'per_pseudo', 'per_mdp') VALUES
+(1,'Caroline',NULL,26,'caroline@gmail.com','caroLaBoss','caroDu75'),
+(2,'Roger','Sanchez',42,'roger@gmail.com','rogerLaBoss','rogerDu59'),
+(3,'Emmanuel','Moman',31,'moman@gmail.com','momanus','momantv'),
+(4,'Delphine','Belle',24,'delphine@xnxx.com','belleDelphine','ohMiBod'),
+(5,'Timeo',NULL,7,'timeo@hotmail.fr','XxDarkSasukexX','pipicaca'),
+(6,'Manon',NULL,21,'manon@gmail.com','superManon','angryBirds24'),
+(7,'Xavier','Dang',40,'mistermv@lefigaro.fr','mistermv','jadoreLeZboub');
 
 -- -----------------------------------------------------
 -- Table `superFindBros`.`jeu`
@@ -34,6 +43,15 @@ CREATE TABLE IF NOT EXISTS `superFindBros`.`jeu` (
   PRIMARY KEY (`jeu_num`))
 ENGINE = InnoDB;
 
+INSERT INTO `jeu` (`jeu_num`, `jeu_nom`, `jeu_annee`, `jeu_editeur`, `jeu_description`) VALUES
+(1,'Among Us',2018,'InnerSloth','Chaque joueur incarne un des membres de l''équipage d''un vaisseau spatial, chacun pouvant être soit un équipier, soit un imposteur'),
+(2,'Fall Guys: Ultimate Knockout',2020,'Devolver Digital','Jeu vidéo multijoueur fortement inspiré des jeux télévisés de course d''obstacles comme Takeshi Castle'),
+(3,'Super Smash Bros.',2018,'Nintendo','Jeu de combat multijoueur, crossover des différents univers de Nintendo'),
+(4,'Rocket League',2015,'Psyonix','Jeu vidéo de sport où les joueurs, conduisant des voitures, doivent frapper un ballon afin de marquer dans le but adverse. Les voitures sont équipées de boost et peuvent sauter, permettant de jouer le ballon dans les airs.'),
+(5,'Counter-Strike: Global Offensive',2012,'Valve Corporation','Les anti-terroristes et les terroristes s''affrontent dans différents modes de jeu avec une trentaine d''armes différentes, sans compter les grenades. Un mode entraînement permet aux joueurs de s''habituer aux commandes.'),
+(6,'Civilisation VI',2016,'2K Games','Comme pour les précédents jeux de la série Civilization, le joueur est convié à diriger une « civilisation » (en réalité une nation ou un empire) de ses humbles débuts de chasseurs-cueilleurs jusqu''à un avenir technologique caractérisé notamment par une course à l''exploration spatiale.'),
+(7,'League Of Legends',2009,'Riot Games','Le joueur contrôle un champion aux compétences uniques dont la puissance augmente au fil de la partie se battant contre une équipe de joueurs en temps réel la plupart du temps. L''objectif d''une partie est, dans la quasi-totalité des modes de jeu, de détruire le « Nexus » ennemi'),
+(8,'Animal Crossing: New Horizons',2020,'Nintendo','Abandonnés à eux-même sur une île perdue par Tom Nook dans le cadre d''un programme nommé "Formule Évasion", les joueurs font connaissance avec toutes sortes d''animaux avec lesquels ils peuvent sympathiser. Il faut ensuite s''établir en s''aidant des conseils d''un outil d''assistance (le NookPhone)');
 
 -- -----------------------------------------------------
 -- Table `superFindBros`.`type`
@@ -44,6 +62,13 @@ CREATE TABLE IF NOT EXISTS `superFindBros`.`type` (
   PRIMARY KEY (`typ_num`))
 ENGINE = InnoDB;
 
+INSERT INTO `type` (`typ_num`, `typ_genre`) VALUES
+(1,'FPS'),
+(2,'Simulation'),
+(3,'Stratégie'),
+(4,'Combat'),
+(5,'Course'),
+(6,'Party');
 
 -- -----------------------------------------------------
 -- Table `superFindBros`.`estdetype`
@@ -65,28 +90,60 @@ CREATE TABLE IF NOT EXISTS `superFindBros`.`estdetype` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+INSERT INTO `estdetype` (`jeu_num`, `typ_num`) VALUES
+(1,3),
+(1,6),
+(2,5),
+(2,6),
+(3,4),
+(4,5),
+(5,1),
+(6,3),
+(7,3),
+(8,6);
 
 -- -----------------------------------------------------
 -- Table `superFindBros`.`possede`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`possede` (
+CREATE TABLE IF NOT EXISTS `superFindBros`.`possede` (
   `per_num` INT NOT NULL,
   `jeu_num` INT NOT NULL,
   `tempsdejeumoyen` DECIMAL(1) NOT NULL,
   PRIMARY KEY (`per_num`, `jeu_num`),
   INDEX `id_idx` (`jeu_num` ASC) VISIBLE,
-  CONSTRAINT `id`
+  CONSTRAINT `per_num`
     FOREIGN KEY (`per_num`)
     REFERENCES `superFindBros`.`personne` (`per_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `id`
+  CONSTRAINT `jeu_num`
     FOREIGN KEY (`jeu_num`)
     REFERENCES `superFindBros`.`jeu` (`jeu_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+INSERT INTO `possede` (`per_num`, `jeu_num`,  'tempsdejeumoyen') VALUES
+(1,2,10),
+(1,8,20),
+(2,5,850),
+(3,1,100),
+(3,2,400),
+(3,5,1),
+(3,6,10),
+(4,7,300),
+(4,8,50),
+(5,4,1500),
+(5,7,1000),
+(6,1,10),
+(7,1,200),
+(7,2,100),
+(7,3,75),
+(7,4,100),
+(7,5,10),
+(7,6,10),
+(7,7,20),
+(7,8,15);
 
 -- -----------------------------------------------------
 -- Table `superFindBros`.`ami`
@@ -96,18 +153,33 @@ CREATE TABLE IF NOT EXISTS `superFindBros`.`ami` (
   `per_pernum` INT NOT NULL,
   PRIMARY KEY (`per_num`, `per_pernum`),
   INDEX `id_idx` (`per_pernum` ASC) VISIBLE,
-  CONSTRAINT `id`
+  CONSTRAINT `per_num`
     FOREIGN KEY (`per_num`)
     REFERENCES `superFindBros`.`personne` (`per_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `id`
+  CONSTRAINT `per_pernum`
     FOREIGN KEY (`per_pernum`)
     REFERENCES `superFindBros`.`personne` (`per_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+INSERT INTO `ami` (`per_num`, `per_pernum`) VALUES
+(1,4),
+(1,6),
+(2,3),
+(2,6),
+(3,2),
+(3,6),
+(4,1),
+(4,6),
+(5,7),
+(6,1),
+(6,4),
+(7,2),
+(7,3),
+(7,5);
 
 -- -----------------------------------------------------
 -- Table `superFindBros`.`groupe`
@@ -127,12 +199,12 @@ CREATE TABLE IF NOT EXISTS `superFindBros`.`appartient` (
   `grp_num` INT NOT NULL,
   PRIMARY KEY (`per_num`, `grp_num`),
   INDEX `id_idx` (`grp_num` ASC) VISIBLE,
-  CONSTRAINT `id`
+  CONSTRAINT `per_num`
     FOREIGN KEY (`per_num`)
     REFERENCES `superFindBros`.`personne` (`per_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `id`
+  CONSTRAINT `grp_num`
     FOREIGN KEY (`grp_num`)
     REFERENCES `superFindBros`.`groupe` (`grp_num`)
     ON DELETE NO ACTION
@@ -144,18 +216,18 @@ ENGINE = InnoDB;
 -- Table `superFindBros`.`joue`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `superFindBros`.`joue` (
-  `idjeu` INT NOT NULL,
-  `idgroupe` INT NOT NULL,
-  PRIMARY KEY (`idjeu`, `idgroupe`),
-  INDEX `idgroupe_idx` (`idgroupe` ASC) VISIBLE,
-  CONSTRAINT `idjeu`
-    FOREIGN KEY (`idjeu`)
-    REFERENCES `mydb`.`jeu` (`idjeu`)
+  `jeu_num` INT NOT NULL,
+  `grp_num` INT NOT NULL,
+  PRIMARY KEY (`jeu_num`, `grp_num`),
+  INDEX `id_idx` (`grp_num` ASC) VISIBLE,
+  CONSTRAINT `jeu_num`
+    FOREIGN KEY (`jeu_num`)
+    REFERENCES `superFindBros`.`jeu` (`jeu_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `idgroupe`
-    FOREIGN KEY (`idgroupe`)
-    REFERENCES `mydb`.`groupe` (`idgroupe`)
+  CONSTRAINT `grp_num`
+    FOREIGN KEY (`grp_num`)
+    REFERENCES `superFindBros`.`groupe` (`grp_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
