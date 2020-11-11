@@ -67,6 +67,9 @@
       <a href="#inscription">
         <li href="#inscription">INSCRIPTION</li>
       </a>
+        <a href="./?page=1">
+            <li href="./?page=1">CONNEXION</li>
+        </a>
 
     </ul>
 
