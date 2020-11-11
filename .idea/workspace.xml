@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5c5df910-28c0-4fc9-8f7f-0526ba319ec7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/include/pages/rechercherGroupe.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/include/pages/rechercherGroupe.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/include/pages/suivreJeu.inc.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/code/include/texte.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/include/texte.inc.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

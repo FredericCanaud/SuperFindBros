@@ -1,1 +1,0 @@
-// ici la page où l'utilisateur selectionne les jeux auquels il joue

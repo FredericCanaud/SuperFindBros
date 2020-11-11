@@ -30,6 +30,65 @@
             include_once("pages/connexion.inc.php");
             break;
 
+
+    // ---- PROFIL ----
+
+        case 2:
+            // inclure ici la page pour modifier le profil d'un joueur
+            include_once("pages/modifierProfil.inc.php");
+            break;
+
+        case 3:
+            // inclure ici la page du profil
+            include_once("pages/afficherProfil.inc.php");
+            break;
+
+        case 4:
+            // inclure ici la page pour inclure les détails d'un jour
+            include_once("pages/informationJoueur.inc.php");
+            break;
+
+
+    // ---- AMIS ----
+
+        case 5:
+            // inclure ici la page pour ajouter un ami
+            include_once("pages/ajouterAmi.inc.php");
+            break;
+
+        case 6:
+            // inclure ici la page pour afficher les amis
+            include_once("pages/afficherAmis.inc.php");
+            break;
+
+
+    //---- GROUPE ----
+
+        case 7:
+            // inclure ici la page pour créer un groupe
+            include_once("pages/creerGroupe.inc.php");
+            break;
+
+        case 8:
+            // inclure ici la page pour rechercher un groupe
+            include_once("pages/rechercherGroupe.inc.php");
+            break;
+
+        case 9:
+            // inclure ici la page pour inviter un joueur dans un groupe
+            include_once("pages/inviterJoueurDansGroupe.inc.php");
+            break;
+
+
+    // ---- JEUX ----
+
+        case 10:
+            // inclure ici la page pour afficher les jeux du joueur
+            include_once("pages/afficherJeu.inc.php");
+            break;
+
+
+
         /*case 2:
             // inclure ici la page liste des personnes
             include_once('pages/listerPersonnes.inc.php');
