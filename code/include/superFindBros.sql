@@ -3,26 +3,26 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema super_find_bros
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `superFindBros` DEFAULT CHARACTER SET utf8 ;
-USE `superFindBros` ;
+CREATE SCHEMA IF NOT EXISTS `super_find_bros` DEFAULT CHARACTER SET utf8 ;
+USE `super_find_bros` ;
 
 -- -----------------------------------------------------
--- Table `superFindBros`.`personne`
+-- Table `super_find_bros`.`personne`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `superFindBros`.`personne` (
+CREATE TABLE IF NOT EXISTS `super_find_bros`.`personne` (
   `per_num` INT NOT NULL AUTO_INCREMENT,
   `per_prenom` VARCHAR(45),
   `per_nom` VARCHAR(45),
-  'per_age' INT(3),
+  `per_age` INT(3),
   `per_mail` VARCHAR(80) NOT NULL,
   `per_pseudo` VARCHAR(45) NOT NULL,
   `per_mdp` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`per_num`))
 ENGINE = InnoDB;
 
-INSERT INTO `personne` (`per_num`, `per_prenom`, `per_nom`, `per_age`, `per_mail`, 'per_pseudo', 'per_mdp') VALUES
+INSERT INTO `personne` (`per_num`, `per_prenom`, `per_nom`, `per_age`, `per_mail`, `per_pseudo`, `per_mdp`) VALUES
 (1,'Caroline',NULL,26,'caroline@gmail.com','caroLaBoss','caroDu75'),
 (2,'Roger','Sanchez',42,'roger@gmail.com','rogerLaBoss','rogerDu59'),
 (3,'Emmanuel','Moman',31,'moman@gmail.com','momanus','momantv'),
@@ -32,9 +32,9 @@ INSERT INTO `personne` (`per_num`, `per_prenom`, `per_nom`, `per_age`, `per_mail
 (7,'Xavier','Dang',40,'mistermv@lefigaro.fr','mistermv','jadoreLeZboub');
 
 -- -----------------------------------------------------
--- Table `superFindBros`.`jeu`
+-- Table `super_find_bros`.`jeu`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `superFindBros`.`jeu` (
+CREATE TABLE IF NOT EXISTS `super_find_bros`.`jeu` (
   `jeu_num` INT NOT NULL AUTO_INCREMENT,
   `jeu_nom` VARCHAR(80) NOT NULL,
   `jeu_annee` YEAR(4) NOT NULL,
@@ -54,9 +54,9 @@ INSERT INTO `jeu` (`jeu_num`, `jeu_nom`, `jeu_annee`, `jeu_editeur`, `jeu_descri
 (8,'Animal Crossing: New Horizons',2020,'Nintendo','Abandonnés à eux-même sur une île perdue par Tom Nook dans le cadre d''un programme nommé "Formule Évasion", les joueurs font connaissance avec toutes sortes d''animaux avec lesquels ils peuvent sympathiser. Il faut ensuite s''établir en s''aidant des conseils d''un outil d''assistance (le NookPhone)');
 
 -- -----------------------------------------------------
--- Table `superFindBros`.`type`
+-- Table `super_find_bros`.`type`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `superFindBros`.`type` (
+CREATE TABLE IF NOT EXISTS `super_find_bros`.`type` (
   `typ_num` INT NOT NULL,
   `typ_genre` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`typ_num`))
@@ -71,21 +71,16 @@ INSERT INTO `type` (`typ_num`, `typ_genre`) VALUES
 (6,'Party');
 
 -- -----------------------------------------------------
--- Table `superFindBros`.`estdetype`
+-- Table `super_find_bros`.`estdetype`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `superFindBros`.`estdetype` (
+CREATE TABLE IF NOT EXISTS `super_find_bros`.`estdetype` (
   `jeu_num` INT NOT NULL,
   `typ_num` INT NOT NULL,
   PRIMARY KEY (`jeu_num`, `typ_num`),
-  INDEX `id_idx` (`typ_num` ASC) VISIBLE,
-  CONSTRAINT `id`
-    FOREIGN KEY (`typ_num`)
-    REFERENCES `superFindBros`.`type` (`typ_num`)
+  FOREIGN KEY (`typ_num`) REFERENCES `super_find_bros`.`type` (`typ_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `id`
-    FOREIGN KEY (`jeu_num`)
-    REFERENCES `superFindBros`.`jeu` (`jeu_num`)
+  FOREIGN KEY (`jeu_num`) REFERENCES `super_find_bros`.`jeu` (`jeu_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -103,27 +98,22 @@ INSERT INTO `estdetype` (`jeu_num`, `typ_num`) VALUES
 (8,6);
 
 -- -----------------------------------------------------
--- Table `superFindBros`.`possede`
+-- Table `super_find_bros`.`possede`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `superFindBros`.`possede` (
+CREATE TABLE IF NOT EXISTS `super_find_bros`.`possede` (
   `per_num` INT NOT NULL,
   `jeu_num` INT NOT NULL,
-  `tempsdejeumoyen` DECIMAL(1) NOT NULL,
+  `tempsdejeumoyen` DECIMAL(5) NOT NULL,
   PRIMARY KEY (`per_num`, `jeu_num`),
-  INDEX `id_idx` (`jeu_num` ASC) VISIBLE,
-  CONSTRAINT `per_num`
-    FOREIGN KEY (`per_num`)
-    REFERENCES `superFindBros`.`personne` (`per_num`)
+  FOREIGN KEY (`per_num`) REFERENCES `super_find_bros`.`personne` (`per_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `jeu_num`
-    FOREIGN KEY (`jeu_num`)
-    REFERENCES `superFindBros`.`jeu` (`jeu_num`)
+  FOREIGN KEY (`jeu_num`) REFERENCES `super_find_bros`.`jeu` (`jeu_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `possede` (`per_num`, `jeu_num`,  'tempsdejeumoyen') VALUES
+INSERT INTO `possede` (`per_num`, `jeu_num`, `tempsdejeumoyen`) VALUES
 (1,2,10),
 (1,8,20),
 (2,5,850),
@@ -146,21 +136,16 @@ INSERT INTO `possede` (`per_num`, `jeu_num`,  'tempsdejeumoyen') VALUES
 (7,8,15);
 
 -- -----------------------------------------------------
--- Table `superFindBros`.`ami`
+-- Table `super_find_bros`.`ami`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `superFindBros`.`ami` (
+CREATE TABLE IF NOT EXISTS `super_find_bros`.`ami` (
   `per_num` INT NOT NULL,
   `per_pernum` INT NOT NULL,
   PRIMARY KEY (`per_num`, `per_pernum`),
-  INDEX `id_idx` (`per_pernum` ASC) VISIBLE,
-  CONSTRAINT `per_num`
-    FOREIGN KEY (`per_num`)
-    REFERENCES `superFindBros`.`personne` (`per_num`)
+  FOREIGN KEY (`per_num`) REFERENCES `super_find_bros`.`personne` (`per_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `per_pernum`
-    FOREIGN KEY (`per_pernum`)
-    REFERENCES `superFindBros`.`personne` (`per_num`)
+  FOREIGN KEY (`per_pernum`) REFERENCES `super_find_bros`.`personne` (`per_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -182,9 +167,9 @@ INSERT INTO `ami` (`per_num`, `per_pernum`) VALUES
 (7,5);
 
 -- -----------------------------------------------------
--- Table `superFindBros`.`groupe`
+-- Table `super_find_bros`.`groupe`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `superFindBros`.`groupe` (
+CREATE TABLE IF NOT EXISTS `super_find_bros`.`groupe` (
   `grp_num` INT NOT NULL,
   `grp_nom` VARCHAR(50) NULL,
   PRIMARY KEY (`grp_num`))
@@ -192,42 +177,36 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `superFindBros`.`appartient`
+-- Table `super_find_bros`.`appartient`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `superFindBros`.`appartient` (
+CREATE TABLE IF NOT EXISTS `super_find_bros`.`appartient` (
   `per_num` INT NOT NULL,
   `grp_num` INT NOT NULL,
   PRIMARY KEY (`per_num`, `grp_num`),
-  INDEX `id_idx` (`grp_num` ASC) VISIBLE,
-  CONSTRAINT `per_num`
-    FOREIGN KEY (`per_num`)
-    REFERENCES `superFindBros`.`personne` (`per_num`)
+  FOREIGN KEY (`per_num`)
+    REFERENCES `super_find_bros`.`personne` (`per_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `grp_num`
-    FOREIGN KEY (`grp_num`)
-    REFERENCES `superFindBros`.`groupe` (`grp_num`)
+  FOREIGN KEY (`grp_num`)
+    REFERENCES `super_find_bros`.`groupe` (`grp_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `superFindBros`.`joue`
+-- Table `super_find_bros`.`joue`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `superFindBros`.`joue` (
+CREATE TABLE IF NOT EXISTS `super_find_bros`.`joue` (
   `jeu_num` INT NOT NULL,
   `grp_num` INT NOT NULL,
   PRIMARY KEY (`jeu_num`, `grp_num`),
-  INDEX `id_idx` (`grp_num` ASC) VISIBLE,
-  CONSTRAINT `jeu_num`
-    FOREIGN KEY (`jeu_num`)
-    REFERENCES `superFindBros`.`jeu` (`jeu_num`)
+  FOREIGN KEY (`jeu_num`)
+    REFERENCES `super_find_bros`.`jeu` (`jeu_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `grp_num`
-    FOREIGN KEY (`grp_num`)
-    REFERENCES `superFindBros`.`groupe` (`grp_num`)
+  FOREIGN KEY (`grp_num`)
+    REFERENCES `super_find_bros`.`groupe` (`grp_num`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
