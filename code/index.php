@@ -1,14 +1,14 @@
 <?php
     require_once("include/functions.inc.php");
     require_once("include/config.inc.php");
-    //require_once("include/header.inc.php");
+    require_once("include/header.inc.php");
     require_once("include/autoLoad.inc.php");
 ?>
 <div id="corps">
     <?php
         //require("include/menu.inc.php");
-        //require("include/texte.inc.php");
-        require("include/pages/index.php")
+        require("include/texte.inc.php");
+
     ?>
 </div>
 

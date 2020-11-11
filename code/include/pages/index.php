@@ -86,6 +86,7 @@
           <li><a href="#about-us">A PROPOS</a></li>
           <li><a href="#profile">PROFILS</a></li>
           <li><a href="#inscription">INSCRIPTION</a></li>
+          <li><a href="./?page=1">CONNEXION</a></li>
         </ul>
       </div>
 

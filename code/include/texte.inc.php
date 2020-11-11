@@ -6,24 +6,22 @@
     {$page=0;
     }
 
-    $connec = $_SESSION['estConnecte'];
+    //$connec = $_SESSION['estConnecte'];
     switch ($page) {
 //
 // Personnes
 //
-
         case 0:
-            // inclure ici la page accueil photo
-            include_once('pages/accueil.inc.php');
-            break;
-        case 1:
-            // inclure ici la page insertion nouvelle personne
-            if ($connec==1||$connec==2){
-                include("pages/ajouterPersonne.inc.php");
-            }
+            // inclure ici la page d'accueil
+            include_once('pages/index.php');
             break;
 
-        case 2:
+        case 1:
+            // inclure ici la page de connexion
+            include_once("pages/connexion.php");
+            break;
+
+        /*case 2:
             // inclure ici la page liste des personnes
             include_once('pages/listerPersonnes.inc.php');
             break;
@@ -108,9 +106,9 @@
                 include("pages/supprimerVille.inc.php");
             }
             break;
+*/
 
-
-        default : 	include_once('pages/accueil.inc.php');
+        default : 	include_once('pages/index.php');
     }
 
     ?>
