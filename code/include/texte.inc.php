@@ -26,8 +26,13 @@
             break;
 
         case 1:
-            // inclure ici la page de connexion
-            include_once("pages/connexion.inc.php");
+            if ($connec==1||$connec==2) {
+                // inclure ici la page de deconnexion
+                include_once("pages/deconnexion.inc.php");
+            }else{
+                // inclure ici la page de connexion
+                include_once("pages/connexion.inc.php");
+            }
             break;
 
 

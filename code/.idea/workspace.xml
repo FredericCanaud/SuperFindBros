@@ -20,28 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee4116a7-24c5-4577-bf49-babc182ed425" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../baseDeDonne/bd.mwb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../baseDeDonne/bd.mwb.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../css/reset.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../css/style-responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../img/arrow-down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../img/background/accueil.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../img/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../img/icons/free.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../img/icons/menu-media.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../img/icons/minimalist.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../img/icons/responsive.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../img/profile/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../img/profile/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../img/profile/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../img/profile/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../img/profile/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../img/profile/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../img/profile/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/header.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/header.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/pages/connexion.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/pages/connexion.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/texte.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/texte.inc.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,5 +75,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1114" y="623" key="NewPhpFileDialog" timestamp="1605557259475">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1114" y="623" key="NewPhpFileDialog/0.0.2560.1400/2560.360.1920.1040@0.0.2560.1400" timestamp="1605557259475" />
   </component>
 </project>
