@@ -13,4 +13,8 @@
         }
         return 1;
     }
+
+    function printC($msg){
+        echo "<script>console.log(".json_encode($msg).")</script>";
+    }
 ?>

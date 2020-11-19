@@ -7,9 +7,6 @@
 
     <title>Super Find Bros.</title>
 
-    <link rel="shortcut icon" href="img/favicon.png">
-
-
 </head>
 
 <body>

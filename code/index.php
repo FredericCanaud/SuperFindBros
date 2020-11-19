@@ -6,7 +6,7 @@
 ?>
 <div id="corps">
     <?php
-        //require("include/menu.inc.php");
+        require("include/menu.inc.php");
         require("include/texte.inc.php");
 
     ?>
