@@ -34,7 +34,7 @@
 <body>
 <?php
     // si on est connecté
-    if (($_SESSION['estConnecte']==1) || ($_GET['page']!=0)){
+    if (($_SESSION['estConnecte']==1) || (!empty($_GET['page']))){
 ?>
     <div id="headerConnect">
         <div id="bandeLogo">

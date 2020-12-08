@@ -21,15 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ee4116a7-24c5-4577-bf49-babc182ed425" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/PersonneManager.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/PersonneManager.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/userPart.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/userPart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/functions.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/functions.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/header.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/header.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/pages/accueil.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/pages/accueil.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/pages/accueilConnecte.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/pages/accueilConnecte.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/pages/connexion.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/pages/connexion.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/pages/deconnexion.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/pages/deconnexion.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/menu.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/menu.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/pages/afficherAmis.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/pages/afficherAmis.inc.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +60,8 @@
       <updated>1603709793867</updated>
       <workItem from="1603709794925" duration="4742000" />
       <workItem from="1605772874779" duration="10804000" />
+      <workItem from="1605856689347" duration="36000" />
+      <workItem from="1607422066248" duration="728000" />
     </task>
     <servers />
   </component>
@@ -93,5 +89,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1114" y="623" key="NewPhpFileDialog/0.0.2560.1400/2560.360.1920.1040@0.0.2560.1400" timestamp="1605779409442" />
+    <state x="1097" y="613" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607422080793">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1097" y="613" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400/2560.360.1920.1040@0.0.2560.1400" timestamp="1607422080793" />
   </component>
 </project>
