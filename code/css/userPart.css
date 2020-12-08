@@ -80,9 +80,56 @@
 
 
 
+/*========= TITRE ET AUTRES ===============*/
+
+.titre1 {
+    width:50%;
+    text-align: center;
+    font-size: 28px;
+    margin: 1% auto 2% auto;
+    color: #3c3c3c;
+}
+
+.message{
+    color: #3c3c3c;
+}
 
 
+/*========= AMIS ============*/
 
+#rechercheAmi{
+    width: 12%;
+    float: right;
+    border-radius: 10px;
+    background-color: #3c3c3c;
+    margin-right: 1%;
+    padding: 5px;
+    text-align: center;
+}
+
+#rechercheAmi a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #f0f0f0;
+}
+
+#listeAmis{
+    margin-left: 5%;
+}
+
+#tableAmi td{
+    padding: 1%;
+    text-align: center;
+    margin: 1%;
+}
+
+#tableAmi{
+    margin-bottom: 2%;
+}
+
+#tableAmi tr{
+    border-bottom: solid black 2px;
+}
 
 
 

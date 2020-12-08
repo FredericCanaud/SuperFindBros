@@ -28,6 +28,9 @@ class Personne
                 case 'per_num':
                     $this->setPerNum($valeur);
                     break;
+                case 'per_pernum':
+                    $this->setPerNum($valeur);
+                    break;
                 case 'per_nom':
                     $this->setPerNom($valeur);
                     break;
