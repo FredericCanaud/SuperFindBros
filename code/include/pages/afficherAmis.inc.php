@@ -19,6 +19,7 @@
             <th>Nom</th>
             <th>Prénom</th>
             <th>Pseudo</th>
+            <th></th>
         </tr>
         <?php
 

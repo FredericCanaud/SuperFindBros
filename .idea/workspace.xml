@@ -21,8 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5c5df910-28c0-4fc9-8f7f-0526ba319ec7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/include/pages/suivreJeu.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/include/texte.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/include/texte.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/css/userPart.css" beforeDir="false" afterPath="$PROJECT_DIR$/code/css/userPart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/include/pages/afficherAmis.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/include/pages/afficherAmis.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/include/pages/ajouterAmi.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/include/pages/ajouterAmi.inc.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +79,7 @@
       <updated>1605102811816</updated>
       <workItem from="1605102813249" duration="5044000" />
       <workItem from="1605110360356" duration="534000" />
+      <workItem from="1607519884384" duration="688000" />
     </task>
     <servers />
   </component>

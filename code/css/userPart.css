@@ -94,6 +94,21 @@
     color: #3c3c3c;
 }
 
+.formulaire{
+    text-align: center;
+    width:25%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    padding: 1%;
+}
+
+.formulaire label{
+    color: #3c3c3c;
+    margin-bottom: 200px;
+}
+
 
 /*========= AMIS ============*/
 
@@ -118,7 +133,7 @@
 }
 
 #tableAmi td{
-    padding: 1%;
+    padding: 5%;
     text-align: center;
     margin: 1%;
 }

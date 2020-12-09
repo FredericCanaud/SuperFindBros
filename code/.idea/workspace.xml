@@ -19,15 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee4116a7-24c5-4577-bf49-babc182ed425" name="Default Changelist" comment="update menu">
+    <list default="true" id="ee4116a7-24c5-4577-bf49-babc182ed425" name="Default Changelist" comment="back afficher supprimer amis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/AmiManager.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/AmiManager.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/Personne.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Personne.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/userPart.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/userPart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/header.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/header.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/pages/afficherAmis.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/pages/afficherAmis.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/pages/ajouterAmi.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/pages/ajouterAmi.inc.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +61,7 @@
       <workItem from="1603709794925" duration="4742000" />
       <workItem from="1605772874779" duration="10804000" />
       <workItem from="1605856689347" duration="36000" />
-      <workItem from="1607422066248" duration="17065000" />
+      <workItem from="1607422066248" duration="17219000" />
     </task>
     <task id="LOCAL-00001" summary="update menu">
       <created>1607422820217</created>
@@ -75,7 +70,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607422820217</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="back afficher supprimer amis">
+      <created>1607463346678</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607463346678</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,7 +97,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="update menu" />
+    <MESSAGE value="back afficher supprimer amis" />
+    <option name="LAST_COMMIT_MESSAGE" value="back afficher supprimer amis" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1027" y="554" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1607423964989">
@@ -110,10 +113,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1114" y="623" key="NewPhpFileDialog/0.0.2560.1400/2560.360.1920.1040@0.0.2560.1400" timestamp="1605779409442" />
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1607422837631">
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1607463347861">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.360.1920.1040@0.0.2560.1400" timestamp="1607422837631" />
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.360.1920.1040@0.0.2560.1400" timestamp="1607463347861" />
     <state x="1097" y="613" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607422080793">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
