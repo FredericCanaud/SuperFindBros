@@ -30,7 +30,7 @@
                     <td><?php echo $ami->getPerNom();?></td>
                     <td><?php echo $ami->getPerPrenom();?></td>
                     <td><?php echo $ami->getPerPseudo();?></td>
-                    <td><a href="<?php echo "./?page=8&id=".$ami->getPerNum(); ?>">Supprimer</a></td>
+                    <td><a href="<?php echo "./?page=8&id=".$ami->getPerNum(); ?>" class="deleteB">Supprimer</a></td>
                 </tr>
         <?php
             }

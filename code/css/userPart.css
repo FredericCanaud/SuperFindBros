@@ -132,6 +132,12 @@
     margin-left: 5%;
 }
 
+#tableAmi th{
+    font-weight: bold;
+    padding: 5%;
+    margin: 1%;
+}
+
 #tableAmi td{
     padding: 5%;
     text-align: center;
@@ -144,6 +150,15 @@
 
 #tableAmi tr{
     border-bottom: solid black 2px;
+}
+
+.deleteB{
+    text-decoration: none;
+    margin: 5px;
+    background-color: #b13d3d;
+    padding: 3px;
+    border-radius: 20px;
+    color: #f0f0f0;
 }
 
 
