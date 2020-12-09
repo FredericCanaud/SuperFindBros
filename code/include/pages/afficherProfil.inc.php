@@ -35,7 +35,7 @@
         ?>
         <br>
         <br>
-        <table>
+        <table class="tableArrange">
             <tr>
                 <td>
                     <pre>Votre nom :</pre>
@@ -73,11 +73,11 @@
                     <pre>Votre mail :</pre>
                 </td>
                 <td>
-                    <pre><?php echo "     ".$moi->getPerMail()." ans";?></pre>
+                    <pre><?php echo "     ".$moi->getPerMail();?></pre>
                 </td>
             </tr>
         </table>
-        <input type="button" class="validationBouton" value="éditer" onClick="window.location = './?page=5'">
+        <input type="button" class="validationBouton" value="éditer" onClick="window.location = './?page=4'">
     </div>
     <div id="droite">
         <h3> Jeux </h3>

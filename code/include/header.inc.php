@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="css/userPart.css" />
 
     <link rel="shortcut icon" href="img/favicon.png">
-
+    <script src="../js/function.js"></script>
 </head>
 <body>
 <?php
