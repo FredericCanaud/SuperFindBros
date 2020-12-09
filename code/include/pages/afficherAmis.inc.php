@@ -30,7 +30,7 @@
                     <td><?php echo $ami->getPerNom();?></td>
                     <td><?php echo $ami->getPerPrenom();?></td>
                     <td><?php echo $ami->getPerPseudo();?></td>
-                    <td><a href="<?php echo "./?page=6&id=".$ami->getPerNum(); ?>">Supprimer</a></td>
+                    <td><a href="<?php echo "./?page=8&id=".$ami->getPerNum(); ?>">Supprimer</a></td>
                 </tr>
         <?php
             }
@@ -41,7 +41,7 @@
             <p class="message">Ami supprimé</p>
 
         <?php
-            header( "refresh:2;url=?page=6" );
+            header( "refresh:2;url=?page=8" );
         }
         ?>
     </table>
