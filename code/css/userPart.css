@@ -85,9 +85,8 @@
 /*========= TITRE ET AUTRES ===============*/
 
 #corps{
-    position: relative;
-    min-height: 49%;
-    background-color: #b13d3d;
+    /* voir dans footer.inc.php */
+
 }
 
 .containerUser{
@@ -119,6 +118,10 @@
 
 .formulaire label{
     color: #3c3c3c;
+}
+
+#corps p{
+    font-size: 18px;
 }
 
 
@@ -186,7 +189,7 @@
 }
 
 #profil h3{
-    font-size: 22px;
+    font-size: 24px;
 
 }
 
@@ -198,7 +201,7 @@
 }
 
 #droite{
-    background-color: darkcyan;
+    background-color: steelblue;
 }
 
 .bandeAmi{
@@ -211,6 +214,19 @@
 #milieu{
     background-color: #b13d3d;
 }
+
+#milieu table{
+    margin: 0 auto;
+}
+
+#milieu td{
+    font-size: 18px;
+    color: #f0f0f0;
+    text-align: left;
+    padding-bottom: 7%;
+}
+
+
 
 #gauche{
     background-color: darkgreen;
