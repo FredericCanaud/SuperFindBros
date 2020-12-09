@@ -27,8 +27,8 @@
 ?>
     <style>
         .footer{
-            position: absolute;
-            bottom:0px;
+            position: relative;
+            bottom:0;
         }
     </style>
 

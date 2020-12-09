@@ -84,6 +84,16 @@
 
 /*========= TITRE ET AUTRES ===============*/
 
+#corps{
+    position: relative;
+    min-height: 49%;
+    background-color: #b13d3d;
+}
+
+.containerUser{
+    height: 500px;
+}
+
 .titre1 {
     width:50%;
     text-align: center;
@@ -173,7 +183,6 @@
     display:flex;
     flex-direction: row;
     justify-content: space-around;
-
 }
 
 #profil h3{

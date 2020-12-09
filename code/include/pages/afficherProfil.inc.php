@@ -26,7 +26,7 @@
         ?>
         <br>
         <br>
-        <input type="button" class="validationBouton" value="gérer">
+        <input type="button" class="validationBouton" value="gérer" onClick="window.location = './?page=8'">
     </div>
     <div id="milieu">
         <h3> Informations </h3>
