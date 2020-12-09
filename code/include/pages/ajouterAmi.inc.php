@@ -29,7 +29,8 @@
 <?php
     }else{
         $idAmi = $personneManager->getIdParPseudo($_POST['pseudoAmi']);
-        if ($idAmi == -1){
+        $idMoi = $_SESSION['userId'];
+        if (($idAmi == -1) || ($idAmi==$idMoi)){
 ?>
             <div class="formulaire">
                 <form method="post" action="./?page=7">
