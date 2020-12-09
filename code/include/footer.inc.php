@@ -20,3 +20,19 @@
     <div class="copyright">© 2020. Tous droits réservés Thomas Campredon - Frédéric Canaud</div>
 
 </section>
+
+
+<?php
+    if ($_SESSION['userId'] != -1){
+?>
+    <style>
+        .footer{
+            position: absolute;
+            bottom:0px;
+        }
+    </style>
+
+<?php
+    }
+
+?>

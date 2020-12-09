@@ -760,6 +760,7 @@ input.submit{
   bottom:0;
   width:100%;
   background:#3c3c3c;
+  z-index: -1;
 }
 
 .footer .logo{

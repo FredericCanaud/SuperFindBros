@@ -76,6 +76,8 @@
 .validationBouton{
     background-color: #2fa68e;
     border-radius: 25px;
+    font-size:18px;
+    font-weight: bold;
 }
 
 
@@ -130,6 +132,7 @@
 
 #listeAmis{
     margin-left: 5%;
+    z-index: 10;
 }
 
 #tableAmi th{
@@ -162,7 +165,47 @@
 }
 
 
+/*============ PROFILS ==============*/
 
+#profil{
+    width:90%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+#profil h3{
+    font-size: 22px;
+
+}
+
+#droite, #milieu, #gauche{
+    border-radius: 15px;
+    padding: 1%;
+    width: 26%;
+    text-align: center;
+}
+
+#droite{
+    background-color: darkcyan;
+}
+
+.bandeAmi{
+    width: 60%;
+    margin: 0px auto;
+    padding:5px;
+    word-spacing: 4px;
+}
+
+#milieu{
+    background-color: #b13d3d;
+}
+
+#gauche{
+    background-color: darkgreen;
+}
 
 
 
