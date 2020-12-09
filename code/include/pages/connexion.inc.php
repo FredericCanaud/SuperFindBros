@@ -36,12 +36,10 @@ if ((empty($_POST["mail"])) || (empty($_POST["mdp"]))){
         if ($mdpVerif == $mdp){
             $_SESSION["estConnecte"] = 1;
             $_SESSION['userId'] = $personneManager->getIdParMail($_POST["mail"]);
-
+            header( "refresh:2;url=?page=0" );
 ?>
         <p style="color:black"> Redirection automatique dans 2 secondes </p>
-
 <?php
-        header( "refresh:2;url=?page=0" );
         }
     }else{
         header( "refresh:0;url=?page=1" );

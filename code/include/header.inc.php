@@ -23,10 +23,10 @@
     <title>
         <?php echo $title ?>
     </title>
-    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <link rel="stylesheet" type="text/css" href="../css/style-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="../css/userPart.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="css/userPart.css" />
 
     <link rel="shortcut icon" href="img/favicon.png">
 
@@ -39,7 +39,7 @@
     <div id="headerConnect">
         <div id="bandeLogo">
             <div id="logoSFB">
-                <img src="../img/logo2.png" alt="logo2.png">
+                <img src="img/logo2.png" alt="logo2.png">
             </div>
         </div>
     </div>
