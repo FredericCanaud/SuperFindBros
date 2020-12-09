@@ -2,7 +2,7 @@
 
 
 <div id="rechercheAmi">
-    <a href="./?page=5">Ajouter un ami</a>
+    <a href="./?page=7">Ajouter un ami</a>
 </div>
 <div id="listeAmis">
 
