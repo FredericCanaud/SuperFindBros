@@ -40,6 +40,8 @@ if ((empty($_POST["mail"])) || (empty($_POST["mdp"]))){
 ?>
         <p class="message"> Redirection automatique dans 2 secondes </p>
 <?php
+        }else{
+            header( "refresh:0;url=?page=1" );
         }
     }else{
         header( "refresh:0;url=?page=1" );
