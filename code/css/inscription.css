@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+}
+
+table{
+    margin: 45px auto;
+}
+
+h1, h2, p{
+    color: black;
+}
+h2{
+    font-size: 20px;
+}
+.footer{
+    position: relative;
+}
+.error{
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}

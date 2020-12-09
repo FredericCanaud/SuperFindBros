@@ -39,7 +39,7 @@
     <div id="headerConnect">
         <div id="bandeLogo">
             <div id="logoSFB">
-                <img src="../img/logo2.png" alt="logo2.png">
+                <img src="img/logo2.png" alt="logo2.png">
             </div>
         </div>
     </div>

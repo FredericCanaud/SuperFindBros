@@ -20,9 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c5df910-28c0-4fc9-8f7f-0526ba319ec7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/code/classes/Ami.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/AmiManager.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/Appartient.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/AppartientManager.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/Groupe.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/GroupeManager.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/Jeu.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/JeuManager.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/Joue.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/JoueManager.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/Personne.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/PersonneManager.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/Possede.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/PossedeManager.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/Type.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/classes/TypeManager.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/28e0caa5-2bb2-4c36-b11a-e026316f53ad.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/28e0caa5-2bb2-4c36-b11a-e026316f53ad/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/code/include/pages/suivreJeu.inc.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/code/include/texte.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/include/texte.inc.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/code/classes/Mypdo.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/code/classes/Mypdo.class.php" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +66,7 @@
     <property name="DatabaseDriversLRU" value="mariadb&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/Betisier-IUT" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Database Script.superFindBros.sql">
@@ -76,7 +98,9 @@
       <option name="presentableId" value="Default" />
       <updated>1605102811816</updated>
       <workItem from="1605102813249" duration="5044000" />
-      <workItem from="1605110360356" duration="534000" />
+      <workItem from="1605110360356" duration="798000" />
+      <workItem from="1605111168603" duration="2156000" />
+      <workItem from="1605113720007" duration="6338000" />
     </task>
     <servers />
   </component>
@@ -100,29 +124,49 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1440.69.1440.850/0.0.1536.824/1920.199.1360.728@0.0.1536.824" timestamp="1605110429469" />
+<<<<<<< Updated upstream
     <state x="1010" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605111845787">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.360.1920.1040@0.0.2560.1400" timestamp="1605111845787" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1605110868341">
+=======
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605116036590">
+>>>>>>> Stashed changes
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/-1440.69.1440.850/0.0.1536.824/1920.199.1360.728@0.0.1536.824" timestamp="1605110868341" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1605110868341">
+    <state x="549" y="167" key="FileChooserDialogImpl/-1440.69.1440.850/0.0.1536.824/1920.199.1360.728@0.0.1536.824" timestamp="1605116036590" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1605111158839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/-1440.69.1440.850/0.0.1536.824/1920.199.1360.728@0.0.1536.824" timestamp="1605110868341" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1605110868341">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/-1440.69.1440.850/0.0.1536.824/1920.199.1360.728@0.0.1536.824" timestamp="1605111158839" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1605111158839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/-1440.69.1440.850/0.0.1536.824/1920.199.1360.728@0.0.1536.824" timestamp="1605110868341" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1605110868341">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/-1440.69.1440.850/0.0.1536.824/1920.199.1360.728@0.0.1536.824" timestamp="1605111158839" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1605111158839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+<<<<<<< Updated upstream
     <state width="1493" height="210" key="GridCell.Tab.0.right/-1440.69.1440.850/0.0.1536.824/1920.199.1360.728@0.0.1536.824" timestamp="1605110868341" />
     <state x="1114" y="623" key="NewPhpFileDialog" timestamp="1605116138794">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1114" y="623" key="NewPhpFileDialog/0.0.2560.1400/2560.360.1920.1040@0.0.2560.1400" timestamp="1605116138794" />
+=======
+    <state width="1493" height="210" key="GridCell.Tab.0.left/-1440.69.1440.850/0.0.1536.824/1920.199.1360.728@0.0.1536.824" timestamp="1605111158839" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1605111158839">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/-1440.69.1440.850/0.0.1536.824/1920.199.1360.728@0.0.1536.824" timestamp="1605111158839" />
+    <state x="1114" y="623" key="NewPhpFileDialog" timestamp="1605107890509">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1114" y="623" key="NewPhpFileDialog/0.0.2560.1400/2560.360.1920.1040@0.0.2560.1400" timestamp="1605107890509" />
+    <state x="-1349" y="56" width="1115" height="811" maximized="true" key="dock-window-1" timestamp="1605116078125">
+      <screen x="-1440" y="69" width="1440" height="850" />
+    </state>
+    <state x="-1349" y="56" width="1115" height="811" maximized="true" key="dock-window-1/-1440.69.1440.850/0.0.1536.824/1920.199.1360.728@0.0.1536.824" timestamp="1605116078125" />
+>>>>>>> Stashed changes
   </component>
 </project>

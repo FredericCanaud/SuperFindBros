@@ -7,6 +7,17 @@
 
     <title>Super Find Bros.</title>
 
+    <link rel="shortcut icon" href="../../img/favicon.png">
+
+    <script type='text/javascript'>
+        function check(input) {
+            if (input.value !== document.getElementById('password').value) {
+                input.setCustomValidity('Vos mots de passe ne se correspondent pas.');
+            } else {
+                input.setCustomValidity('');
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -21,11 +32,11 @@
         <div class="content">
             <div class="text">
 
-                <div class="logo"><img src="img/logo.png"></div>
+                <div class="logo"><img src="img/logo.png" alt="Logo"></div>
 
                 <h1>Super Find Bros.</h1>
                 <hr />
-                <h2>Rencontrez les joueurs (et joueuses !) les plus chaud(e)s de votre région</h2>
+                <h2>Rencontrez les joueurs (et joueuses !) les plus attypiques de votre région</h2>
 
                 <a href="#a-propos">
                     <div class="en-savoir-plus">En savoir plus</div>
@@ -245,26 +256,28 @@
 
             <div class="form">
 
-                <form method="post" action="#">
+                <form method="post" action="index.php?page=2">
 
                     <div class="column">
                         PSEUDO<br /><br />
-                        <input name="name" id="pseudo" value="" />
+                        <input type="text" id="pseudo" name="per_pseudo" value="" required/>
                     </div>
 
                     <div class="column-2">
                         E-MAIL<br /><br />
-                        <input name="email" id="email" value="" />
+                        <input type="email" id="email" name="per_mail" value="" required/>
                     </div>
 
                     <div class="column-3">
                         MOT DE PASSE<br /><br />
-                        <input name="password" id="password" value="" />
+                        <input type="password" id="password" name="per_mdp" value="" required />
                     </div>
 
                     <div class="column-4">
-                        CONFIFMER MOT DE PASSE<br /><br />
-                        <input name="password" id="confirm" value="" />
+                        <label for="confirm">
+                            CONFIRMER MOT DE PASSE
+                        </label><br /><br />
+                        <input type="password" id="confirm" value="" required oninput="check(this)"/>
                     </div>
 
                     <div class="button">
