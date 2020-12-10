@@ -40,6 +40,7 @@ else if(empty($_POST["per_nom"]) || empty($_POST["per_prenom"]) || empty($_POST[
             "per_age" => $_POST["per_age"]
         );
         ?>
+    <div class="carte">
         <form action="#" id="insert" method="post">
             <h1> Vous y êtes presque ! </h1>
             <h2> Avant d'accéder à l'application, nous avons
@@ -64,6 +65,7 @@ else if(empty($_POST["per_nom"]) || empty($_POST["per_prenom"]) || empty($_POST[
             </table>
             <input type="submit" value="Valider"/>
         </form>
+    </div>
         <br />
         <?php
     }

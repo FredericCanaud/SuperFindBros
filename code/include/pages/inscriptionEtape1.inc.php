@@ -2,7 +2,6 @@
 <html lang="fr" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title>Inscription première étape</title>
     <link rel="stylesheet" type="text/css" href="css/inscription.css" />
 </head>
 <body>
@@ -22,6 +21,7 @@ if(empty($_POST["per_pseudo"]) || empty($_POST["per_mail"]) || empty($_POST["per
             "per_mdp" => $_POST["per_mdp"],
         );
         ?>
+    <div class="carte">
         <form action="index.php?page=3" id="insert" method="post">
             <h1> Bienvenue dans Super Find Bros ! </h1>
             <h2> Avant d'accéder à l'application, nous avons
@@ -55,6 +55,7 @@ if(empty($_POST["per_pseudo"]) || empty($_POST["per_mail"]) || empty($_POST["per
             <input type="submit" value="Valider"/>
         </form>
         <br />
+    </div>
         <?php
     }
     else if(!empty($_POST["per_nom"]) && !empty($_POST["per_prenom"]) && !empty($_POST["per_age"])){
