@@ -23,5 +23,21 @@ class JeuManager {
         $requete->closeCursor();
         return $listeJeux;
     }
+
+    ////////////////////////////////////////////////
+    //
+    // Fonction qui retourne tous les jeux valides de la BD
+    //
+    ////////////////////////////////////////////////
+    public function getAllNomJeux() {
+        $listeJeux = array();
+        $sql = 'SELECT jeu_num, jeu_nom FROM jeu';
+        $requete = $this->db->prepare($sql);
+        $requete->execute();
+        while ($jeu = $requete->fetch(PDO::FETCH_OBJ)) $listeJeux[] = new Jeu($jeu);
+        $requete->closeCursor();
+        return $listeJeux;
+    }
+
 }
 ?>

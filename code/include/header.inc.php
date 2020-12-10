@@ -27,7 +27,6 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/style-responsive.css" />
     <link rel="stylesheet" type="text/css" href="css/userPart.css" />
-
     <link rel="shortcut icon" href="img/favicon.png">
     <script src="../js/function.js"></script>
 </head>
