@@ -11,7 +11,7 @@
 
     // connec == 1 <=> estConnecté
     // connec == 2 <=> estAdmin
-    // connec == 0 <=> estPasConnecté
+    // connec == -1 <=> estPasConnecté
 
     switch ($page) {
 
@@ -53,11 +53,6 @@
         case 5:
             // inclure ici la page du profil
             include_once("pages/afficherProfil.inc.php");
-            break;
-
-        case 6:
-            // inclure ici la page pour inclure les détails d'un jour
-            include_once("pages/informationJoueur.inc.php");
             break;
 
 
