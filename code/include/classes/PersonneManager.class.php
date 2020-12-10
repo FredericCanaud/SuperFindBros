@@ -48,6 +48,34 @@ class PersonneManager {
         return $personne;
     }
 
+    ////////////////////////////////////////////////
+    //
+    // Fonction qui insère une personne dans la BD
+    //
+    ////////////////////////////////////////////////
+
+    public function ajouterPersonne($personne) {
+        $salt = "48@!alsd";
+        $hash = sha1(sha1($personne["per_mdp"]).$salt);
+        $sql = 'INSERT INTO personne(per_prenom, per_nom, per_age, per_mail, per_pseudo, per_mdp) VALUES(:per_prenom, 
+                :per_nom, :per_age, :per_mail, :per_pseudo, :per_mdp)';
+
+        $requete = $this->db->prepare($sql);
+        $requete->bindValue(':per_prenom', $personne["per_prenom"], PDO::PARAM_STR);
+        $requete->bindValue(':per_nom', $personne["per_nom"], PDO::PARAM_STR);
+        $requete->bindValue(':per_age', $personne["per_age"], PDO::PARAM_INT);
+        $requete->bindValue(':per_mail', $personne["per_mail"], PDO::PARAM_STR);
+        $requete->bindValue(':per_pseudo', $personne["per_pseudo"], PDO::PARAM_STR);
+        $requete->bindValue(':per_mdp', $hash, PDO::PARAM_STR);
+        $requete->execute();
+
+        $sql = 'SELECT per_num FROM personne WHERE per_mail = :per_mail AND per_mdp = :per_mdp';
+        $requete = $this->db->prepare($sql);
+        $requete->bindValue(':per_mail', $personne["per_mail"], PDO::PARAM_STR);
+        $requete->bindValue(':per_mdp', $hash, PDO::PARAM_STR);
+        $requete->execute();
+        return $requete->fetch(PDO::FETCH_OBJ);
+    }
 
     ////////////////////////////////////////////////
     //
