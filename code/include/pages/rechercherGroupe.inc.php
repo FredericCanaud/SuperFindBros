@@ -11,8 +11,14 @@ $mesGroupes = $groupeManager->getGroupeParIdPersonne($_SESSION['userId']);
 <div id="groupe">
     <div id="vosGroupes">
         <h3>Mes groupes</h3>
-
+        <br>
         <table>
+            <colgroup>
+                <col span="1" style="width: 10%;">
+                <col span="1" style="width: 10%;">
+            </colgroup>
+
+
         <?php
         foreach ($mesGroupes as $groupe){
             $idGroupe = $groupe->getGrpNum();

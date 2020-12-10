@@ -294,6 +294,25 @@ h2{
     text-align: center;
 }
 
+#vosGroupes td{
+    color: #f0f0f0;
+    padding: 5px;
+}
+
+#vosGroupes a{
+    border-radius: 10px;
+    background-color: darkorange;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f0f0f0;
+}
+
+#vosGroupes table{
+    margin-bottom: 5%;
+}
+
 #rechercherGroupe{
     width:50%;border: solid #3c3c3c 3px;
 }
