@@ -62,7 +62,7 @@ if (empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['pseudo']) |
                         <pre>Votre mdp :</pre>
                     </td>
                     <td>
-                        <input type="text" placeholder="mot de passe" name="mdp" class="textin">
+                        <input type="password" placeholder="Mot de passe" name="mdp" class="textin">
                     </td>
                 </tr>
             </table>

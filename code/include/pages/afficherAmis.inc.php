@@ -15,6 +15,11 @@
     ?>
 
     <table id="tableAmi">
+        <colgroup>
+            <col span="1" style="width: 10%;">
+            <col span="1" style="width: 30%;">
+            <col span="1" style="width: 30%;">
+        </colgroup>
         <tr>
             <th>Nom</th>
             <th>Prénom</th>

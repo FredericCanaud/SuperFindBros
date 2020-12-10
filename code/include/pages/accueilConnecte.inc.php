@@ -1,9 +1,8 @@
 <head>
     <meta charset="utf-8">
-    <title>Inscription première étape</title>
     <link rel="stylesheet" type="text/css" href="css/userPart.css" />
 </head>
-<h1>Accueil connecté</h1>
+<h1>Accueil</h1>
 
 <div class="profile-margin">
 
