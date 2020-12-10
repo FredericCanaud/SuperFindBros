@@ -70,7 +70,10 @@
 
 
     //---- GROUPE ----
-
+        case 6:
+            // inclure ici la page pour avoir les informations d'un groupe
+            include_once("pages/informationGroupe.inc.php");
+            break;
         case 9:
             // inclure ici la page pour créer un groupe
             include_once("pages/creerGroupe.inc.php");

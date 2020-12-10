@@ -16,14 +16,13 @@ $mesGroupes = $groupeManager->getGroupeParIdPersonne($_SESSION['userId']);
         <?php
         foreach ($mesGroupes as $groupe){
             $idGroupe = $groupe->getGrpNum();
-
         ?>
             <tr>
                 <td>
-
+                    <?php echo $groupe->getGrpNom() ;?>
                 </td>
                 <td>
-
+                    <a href="./?page=6&idGroupe=<?php echo $groupe->getGrpNum() ;?>"> détails </a>
                 </td>
             </tr>
 
@@ -36,6 +35,6 @@ $mesGroupes = $groupeManager->getGroupeParIdPersonne($_SESSION['userId']);
         <p class="message">oui</p>
     </div>
     <div id="actionsGroupe">
-        <a href="./?page=9" class="validationBouton">créer groupe</a>
+        <a href="./?page=9">créer groupe</a>
     </div>
 </div>

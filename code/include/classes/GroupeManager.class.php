@@ -32,8 +32,8 @@ class GroupeManager {
 
     public function getGroupeParIdPersonne($id){
         $listeGroupes = array();
-        $sql = 'SELECT grp_num, grp_nom FROM groupe g
-                join appartient a a.grp_num=g.grp_num
+        $sql = 'SELECT g.grp_num, grp_nom FROM groupe g
+                join appartient a on a.grp_num=g.grp_num
                 where per_num=:id';
         $requete = $this->db->prepare($sql);
         $requete->bindValue(':id', $id, PDO::PARAM_INT);
