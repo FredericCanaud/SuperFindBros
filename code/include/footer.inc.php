@@ -31,9 +31,8 @@
             bottom:0;
         }
         #corps{
-            /* voir dans footer.inc.php */
             position: relative;
-            min-height: 49%;
+            min-height: 52%;
         }
     </style>
 

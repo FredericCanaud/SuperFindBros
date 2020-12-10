@@ -43,7 +43,7 @@ if ((empty($_POST["mail"])) || (empty($_POST["mdp"]))){
             header( "refresh:2;url=?page=0" );
             ?>
             <p class="valid"> Authentification réussie </p>
-            <p style="color: black"> Redirection automatique dans 2 secondes </p>
+            <p style="color: #f0f0f0"> Redirection automatique dans 2 secondes </p>
 <?php
         }
         else{

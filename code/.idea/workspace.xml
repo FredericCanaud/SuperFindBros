@@ -19,13 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee4116a7-24c5-4577-bf49-babc182ed425" name="Default Changelist" comment="back afficher supprimer amis">
+    <list default="true" id="ee4116a7-24c5-4577-bf49-babc182ed425" name="Default Changelist" comment="WIP Groupe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/userPart.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/userPart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/classes/GroupeManager.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/classes/GroupeManager.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/pages/informationJoueur.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/pages/rechercherGroupe.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/pages/rechercherGroupe.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/texte.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/texte.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/footer.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/footer.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/pages/connexion.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/pages/connexion.inc.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +63,7 @@
       <workItem from="1605772874779" duration="10804000" />
       <workItem from="1605856689347" duration="36000" />
       <workItem from="1607422066248" duration="17219000" />
-      <workItem from="1607591887371" duration="4790000" />
+      <workItem from="1607591887371" duration="5739000" />
     </task>
     <task id="LOCAL-00001" summary="update menu">
       <created>1607422820217</created>
@@ -81,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607463346678</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="WIP Groupe">
+      <created>1607598135191</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607598135191</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,7 +107,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update menu" />
     <MESSAGE value="back afficher supprimer amis" />
-    <option name="LAST_COMMIT_MESSAGE" value="back afficher supprimer amis" />
+    <MESSAGE value="WIP Groupe" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP Groupe" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1010" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607596511467">
