@@ -176,7 +176,10 @@ h2{
 }
 
 #tableAmi{
+    width: 30%;
     margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #tableAmi tr{

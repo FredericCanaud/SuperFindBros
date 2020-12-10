@@ -26,7 +26,7 @@
         ?>
         <br>
         <br>
-        <input type="button" class="validationBouton" value="gérer" onClick="window.location = './?page=8'">
+        <input type="button" class="validationBouton" value="Gérer" onClick="window.location = './?page=8'">
     </div>
     <div id="milieu">
         <h3> Informations </h3>
@@ -77,7 +77,7 @@
                 </td>
             </tr>
         </table>
-        <input type="button" class="validationBouton" value="éditer" onClick="window.location = './?page=4'">
+        <input type="button" class="validationBouton" value="Éditer" onClick="window.location = './?page=4'">
     </div>
     <div id="droite">
         <h3> Jeux </h3>
