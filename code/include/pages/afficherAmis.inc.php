@@ -35,6 +35,12 @@
                     <td><?php echo $ami->getPerNom();?></td>
                     <td><?php echo $ami->getPerPrenom();?></td>
                     <td><?php echo $ami->getPerPseudo();?></td>
+                    <td>
+                        <form method="post" action="./?page=13">
+                            <input type="hidden" name="desti_num" value="<?php echo $ami->getPerNum(); ?>">
+                            <input type="submit" class="tchatB" value="Tchat"/>
+                        </form>
+                    </td>
                     <td><a href="<?php echo "./?page=8&id=".$ami->getPerNum(); ?>" class="deleteB">Supprimer</a></td>
                 </tr>
         <?php

@@ -6,6 +6,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- Schema super_find_bros
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `super_find_bros` DEFAULT CHARACTER SET utf8 ;
+
 USE `super_find_bros` ;
 
 -- -----------------------------------------------------
@@ -211,7 +212,26 @@ CREATE TABLE IF NOT EXISTS `super_find_bros`.`joue` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `super_find_bros`.`tchat`
+-- -----------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS `super_find_bros`.`tchat` (
+  `message_num` INT NOT NULL AUTO_INCREMENT,
+  `exped_num` INT NOT NULL,
+  `desti_num` INT NOT NULL,
+  `message` VARCHAR(1000) NOT NULL,
+  `date` DATETIME NOT NULL,
+  FOREIGN KEY (`exped_num`) REFERENCES `super_find_bros`.`personne` (`per_num`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  FOREIGN KEY (`desti_num`) REFERENCES `super_find_bros`.`personne` (`per_num`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+    PRIMARY KEY (`message_num`))
+  ENGINE = InnoDB;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+

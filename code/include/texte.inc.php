@@ -68,6 +68,11 @@
             include_once("pages/afficherAmis.inc.php");
             break;
 
+        case 13:
+            // inclure ici la page pour afficher le tchat
+            include_once("pages/tchat.inc.php");
+            break;
+
 
     //---- GROUPE ----
         case 6:
