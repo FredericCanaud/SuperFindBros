@@ -5,21 +5,34 @@ body{
 table{
     margin: 45px auto;
     color: black;
+    width: 50%;
 }
+
+table input{
+    width: 90%;
+}
+
 h1{
     color: black;
 }
+
 h2{
     font-size: 20px;
     color: black;
 }
+
 .footer{
     position: relative;
 }
+
 .error{
     color: red;
     font-weight: bold;
     font-size: 18px;
+}
+
+.carte{
+    width: 80%;
 }
 
 .valid{
@@ -31,7 +44,7 @@ h2{
 @media (min-width: 768px) {
     .carte{
         text-align: center;
-        width: 50%;
+        width: 80%;
         margin: 2% auto 8% auto;
 
         background-color: #f0f0f0;
@@ -39,3 +52,4 @@ h2{
         padding: 1%;
     }
 }
+

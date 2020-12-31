@@ -22,7 +22,7 @@ if(empty($_POST["per_pseudo"]) || empty($_POST["per_mail"]) || empty($_POST["per
         );
         ?>
     <div class="carte">
-        <form action="index.php?page=3" id="insert" method="post">
+        <form action="index.php?page=3" id="insert" method="post" enctype="multipart/form-data">
             <h1> Bienvenue dans Super Find Bros ! </h1>
             <h2> Avant d'accéder à l'application, nous avons
             besoin de quelques informations supplémentaires pour complémenter votre profil ;)</h2>
@@ -51,7 +51,16 @@ if(empty($_POST["per_pseudo"]) || empty($_POST["per_mail"]) || empty($_POST["per
                         <input type="number" name="per_age" id="per_age" size="10" required> <br>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <label>Avatar</label>
+                    </td>
+                    <td>
+                        <input type="file" name="per_avatar" accept="image/*"> <br>
+                    </td>
+                </tr>
             </table>
+
             <input type="submit" value="Valider"/>
         </form>
         <br />

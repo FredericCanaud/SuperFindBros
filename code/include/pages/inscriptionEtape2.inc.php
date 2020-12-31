@@ -9,36 +9,70 @@
 <?php
 $pdo = new Mypdo();
 if(isset($_POST["jeu"])){
-    header("refresh:2;url=index.php");
-    $personneManager = new PersonneManager($pdo);
-    $pers = $personneManager->ajouterPersonne($_SESSION["brow"]);
+    var_dump($_SESSION["brow"]);
+    $target_dir = "\\..\\..\\img\\profile\\";
+    $target_file = $target_dir . basename($_SESSION["brow"]["per_avatar"]);
+    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+    $uploadOk = 1;
 
-    $possedeManager = new PossedeManager($pdo);
-    foreach($_POST["jeu"] as $key => $jeunum){
-        $possedeManager->ajouterJeuPersonne($pers->{"per_num"},$jeunum);
+    /*
+
+    // Taille du fichier
+    if ($_SESSION["brow"]["per_avatar"]["size"] > 5000000) {
+        echo "Désolé, votre fichier est trop volumineux !";
+        $uploadOk = 0;
     }
-    ?>
-    <p class="valid"> Vous êtes bien inscrit sur le site ! </p>
-    <p> Redirection automatique dans 2 secondes... </p>
-    <?php
+
+    // Format du fichier
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+        && $imageFileType != "gif" ) {
+        echo "Désolé, nous acceptons seulement les fichiers JPG, JPEG, PNG et GIF !";
+        $uploadOk = 0;
+    }
+    *
+     */
+    if ($uploadOk == 1 && copy("img\\temp\\".$_SESSION["brow"]["per_avatar"], __DIR__.$target_file)) {
+        unlink("img\\temp\\".$_SESSION["brow"]["per_avatar"]);
+        $personneManager = new PersonneManager($pdo);
+        $pers = $personneManager->ajouterPersonne($_SESSION["brow"]);
+
+        $possedeManager = new PossedeManager($pdo);
+        foreach($_POST["jeu"] as $key => $jeunum){
+            $possedeManager->ajouterJeuPersonne($pers->{"per_num"},$jeunum);
+        }
+        header("refresh:2;url=index.php");
+        ?>
+        <p class="valid"> Vous êtes bien inscrit sur le site ! </p>
+        <p> Redirection automatique dans 2 secondes... </p>
+        <?php
+    } else {
+        header("refresh:2;url=index.php");
+        ?>
+        <p class="error"> Il y a eu une erreur sur l'avatar ! </p>
+        <p> Redirection automatique dans 2 secondes... </p>
+        <?php
+    }
 }
 
 else if(empty($_POST["per_nom"]) || empty($_POST["per_prenom"]) || empty($_POST["per_age"])){
     header("refresh:2;url=index.php");
     ?>
     <p class="error"> Vous tentez d'accéder cette page de la mauvaise façon ! </p>
-    <p class="error"> Redirection automatique dans 2 secondes... </p>
+    <p> Redirection automatique dans 2 secondes... </p>
     <?php
 } else{
-    if (empty($_POST["per_jeu"]) || empty($_POST["per_console"])){
+    if (empty($_POST["per_jeu"])){
         $_SESSION["brow"] = array(
             "per_pseudo" => $_SESSION["brow"]["per_pseudo"],
             "per_mail" => $_SESSION["brow"]["per_mail"],
             "per_mdp" => $_SESSION["brow"]["per_mdp"],
             "per_nom" => $_POST["per_nom"],
             "per_prenom" => $_POST["per_prenom"],
-            "per_age" => $_POST["per_age"]
+            "per_age" => $_POST["per_age"],
+            "per_avatar" => $_FILES["per_avatar"]["name"]
         );
+        $target_dir = "img/temp/";
+        $target_file = $target_dir . basename($_FILES["per_avatar"]["name"]);
         ?>
     <div class="carte">
         <form action="#" id="insert" method="post">

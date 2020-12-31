@@ -11,6 +11,7 @@ class Personne
     private $per_mail;
     private $per_pseudo;
     private $per_mdp;
+    private $per_avatar;
 
     ////////////////// Constructeurs ////////////////
 
@@ -26,9 +27,6 @@ class Personne
             switch ($attribut)
             {
                 case 'per_num':
-                    $this->setPerNum($valeur);
-                    break;
-                case 'per_pernum':
                     $this->setPerNum($valeur);
                     break;
                 case 'per_nom':
@@ -48,6 +46,9 @@ class Personne
                     break;
                 case 'per_mdp':
                     $this->setPerMdp($valeur);
+                    break;
+                case 'per_avatar':
+                    $this->setPerAvatar($valeur);
                     break;
             }
         }
@@ -83,6 +84,10 @@ class Personne
     {
         return $this->per_mdp;
     }
+    public function getPerAvatar()
+    {
+        return $this->per_avatar;
+    }
 
     ////////////////////// Setters //////////////////////
 
@@ -113,6 +118,10 @@ class Personne
     public function setPerMdp($per_mdp)
     {
         $this->per_mdp = $per_mdp;
+    }
+    public function setPerAvatar($per_avatar)
+    {
+        $this->per_avatar = $per_avatar;
     }
 }
 ?>

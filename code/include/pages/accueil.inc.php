@@ -159,87 +159,28 @@
 
         <div class="profile-margin">
 
-            <h1>Liste de personnes connectées</h1>
+            <h1>Rejoignez la communauté !</h1>
             <hr />
 
             <ul class="grid">
-
-                <li>
-                    <a href="#">
-                        <img src="img/profile/1.jpg" alt="Caroline" />
-                        <div class="no-text">
-                            <p>Caroline</p>
-                            <p class="description">26 ans</p>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <img src="img/profile/2.jpg" alt="Roger" />
-                        <div class="no-text">
-                            <p>Roger</p>
-                            <p class="description">42 ans</p>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <img src="img/profile/3.jpg" alt="Emmanuel" />
-                        <div class="no-text">
-                            <p>Emmanuel</p>
-                            <p class="description">31 ans</p>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <img src="img/profile/4.jpg" alt="Delphine" />
-                        <div class="no-text">
-                            <p>Delphine</p>
-                            <p class="description">24 ans</p>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <img src="img/profile/5.jpg" alt="Timéo" />
-                        <div class="no-text">
-                            <p>Timéo</p>
-                            <p class="description">7 ans</p>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <img src="img/profile/6.jpg" alt="Manon" />
-                        <div class="no-text">
-                            <p>Manon</p>
-                            <p class="description">21 ans</p>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <img src="img/profile/7.png" alt="Xavier" />
-                        <div class="no-text">
-                            <p>Xavier</p>
-                            <p class="description">57 ans</p>
-                        </div>
-                    </a>
-                </li>
-
-            </ul>
-
-            <a href="#">
-                <div class="en-savoir-plus">Voir plus de profils</div>
-            </a>
-
+                <?php
+                $pdo = new Mypdo();
+                $personneManager = new PersonneManager($pdo);
+                $personnes = $personneManager->getPersonnesAleatoires();
+                foreach ($personnes as $personne) {
+                    ?>
+                    <li>
+                        <a href="#">
+                            <img src="img/profile/<?php echo $personne->getPerAvatar() ?>" alt="Caroline" class="imageProfil"/>
+                            <div class="no-text">
+                                <p style="color: white;"><?php echo $personne->getPerPseudo() ?></p>
+                                <p class="description"><?php echo $personne->getPerAge() ?> ans</p>
+                            </div>
+                        </a>
+                    </li>
+                    <?php
+                }
+                ?>
         </div>
 
     </section>

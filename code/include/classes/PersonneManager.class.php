@@ -14,9 +14,10 @@ class PersonneManager {
     //
     ////////////////////////////////////////////////
 
-    public function getAllPersonnes() {
+    public function getPersonnesAleatoires() {
         $listePersonnes = array();
-        $sql = 'SELECT per_num, per_nom, per_prenom, per_age, per_mail, per_pseudo, per_mdp FROM personne';
+        $sql = 'SELECT per_num, per_pseudo, per_age, per_avatar FROM personne
+                ORDER BY RAND() LIMIT 6';
         $requete = $this->db->prepare($sql);
         $requete->execute();
         while ($personne = $requete->fetch(PDO::FETCH_OBJ)){
@@ -57,8 +58,8 @@ class PersonneManager {
     public function ajouterPersonne($personne) {
         $salt = "48@!alsd";
         $hash = sha1(sha1($personne["per_mdp"]).$salt);
-        $sql = 'INSERT INTO personne(per_prenom, per_nom, per_age, per_mail, per_pseudo, per_mdp) VALUES(:per_prenom, 
-                :per_nom, :per_age, :per_mail, :per_pseudo, :per_mdp)';
+        $sql = 'INSERT INTO personne(per_prenom, per_nom, per_age, per_mail, per_pseudo, per_mdp, per_avatar) VALUES(:per_prenom, 
+                :per_nom, :per_age, :per_mail, :per_pseudo, :per_mdp, :per_avatar)';
 
         $requete = $this->db->prepare($sql);
         $requete->bindValue(':per_prenom', $personne["per_prenom"], PDO::PARAM_STR);
@@ -67,6 +68,7 @@ class PersonneManager {
         $requete->bindValue(':per_mail', $personne["per_mail"], PDO::PARAM_STR);
         $requete->bindValue(':per_pseudo', $personne["per_pseudo"], PDO::PARAM_STR);
         $requete->bindValue(':per_mdp', $hash, PDO::PARAM_STR);
+        $requete->bindValue(':per_avatar', $personne["per_avatar"], PDO::PARAM_STR);
         $requete->execute();
 
         $sql = 'SELECT per_num FROM personne WHERE per_mail = :per_mail AND per_mdp = :per_mdp';
