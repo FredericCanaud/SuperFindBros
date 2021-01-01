@@ -9,29 +9,11 @@
 <?php
 $pdo = new Mypdo();
 if(isset($_POST["jeu"])){
-    var_dump($_SESSION["brow"]);
     $target_dir = "\\..\\..\\img\\profile\\";
     $target_file = $target_dir . basename($_SESSION["brow"]["per_avatar"]);
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-    $uploadOk = 1;
 
-    /*
-
-    // Taille du fichier
-    if ($_SESSION["brow"]["per_avatar"]["size"] > 5000000) {
-        echo "Désolé, votre fichier est trop volumineux !";
-        $uploadOk = 0;
-    }
-
-    // Format du fichier
-    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-        && $imageFileType != "gif" ) {
-        echo "Désolé, nous acceptons seulement les fichiers JPG, JPEG, PNG et GIF !";
-        $uploadOk = 0;
-    }
-    *
-     */
-    if ($uploadOk == 1 && copy("img\\temp\\".$_SESSION["brow"]["per_avatar"], __DIR__.$target_file)) {
+    if (copy("img\\temp\\".$_SESSION["brow"]["per_avatar"], __DIR__.$target_file)) {
         unlink("img\\temp\\".$_SESSION["brow"]["per_avatar"]);
         $personneManager = new PersonneManager($pdo);
         $pers = $personneManager->ajouterPersonne($_SESSION["brow"]);
@@ -71,8 +53,10 @@ else if(empty($_POST["per_nom"]) || empty($_POST["per_prenom"]) || empty($_POST[
             "per_age" => $_POST["per_age"],
             "per_avatar" => $_FILES["per_avatar"]["name"]
         );
-        $target_dir = "img/temp/";
+
+        $target_dir = "\\..\\..\\img\\temp\\";
         $target_file = $target_dir . basename($_FILES["per_avatar"]["name"]);
+        copy($_FILES["per_avatar"]["tmp_name"], __DIR__.$target_file)
         ?>
     <div class="carte">
         <form action="#" id="insert" method="post">

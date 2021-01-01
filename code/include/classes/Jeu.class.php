@@ -9,6 +9,7 @@ class Jeu
     private $jeu_annee;
     private $jeu_editeur;
     private $jeu_description;
+    private $jeu_image;
 
     ////////////////// Constructeurs ////////////////
 
@@ -38,6 +39,9 @@ class Jeu
                 case 'jeu_description':
                     $this->setJeuDescription($valeur);
                     break;
+                case 'jeu_image':
+                    $this->setJeuImage($valeur);
+                    break;
             }
         }
     }
@@ -64,6 +68,10 @@ class Jeu
     {
         return $this->jeu_description;
     }
+    public function getJeuImage()
+    {
+        return $this->jeu_image;
+    }
 
     ////////////////////// Setters //////////////////////
 
@@ -86,6 +94,10 @@ class Jeu
     public function setJeuDescription($jeu_description)
     {
         $this->jeu_description = $jeu_description;
+    }
+    public function setJeuImage($jeu_image)
+    {
+        $this->jeu_image= $jeu_image;
     }
 }
 ?>

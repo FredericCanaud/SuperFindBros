@@ -56,7 +56,7 @@ if(empty($_POST["per_pseudo"]) || empty($_POST["per_mail"]) || empty($_POST["per
                         <label>Avatar</label>
                     </td>
                     <td>
-                        <input type="file" name="per_avatar" accept="image/*"> <br>
+                        <input type="file" name="per_avatar" accept="image/*" required> <br>
                     </td>
                 </tr>
             </table>

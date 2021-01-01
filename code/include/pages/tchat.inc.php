@@ -3,7 +3,7 @@
 <script>
     function charger() {
 
-        var lastMessage = $('#message_num:last').val(); // on récupère l'id le plus récent
+        var lastMessage = $('#message_num:last').val(); // on récupère l'id du message le plus récent
 
         $.ajax({
             url: "?page=13?id=" + lastMessage,

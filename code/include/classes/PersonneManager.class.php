@@ -27,6 +27,22 @@ class PersonneManager {
         return $listePersonnes;
     }
 
+    public function getPersonnesByJeu($jeunum, $pernum){
+        $listePersonnes = array();
+        $sql = 'SELECT DISTINCT pe.per_num, per_pseudo, per_age, per_avatar FROM personne pe
+                JOIN possede po ON pe.per_num = po.per_num
+                WHERE jeu_num = :jeu_num AND pe.per_num != :per_num ';
+
+        $requete = $this->db->prepare($sql);
+        $requete->bindValue(':jeu_num', $jeunum);
+        $requete->bindValue(':per_num', $pernum);
+        $requete->execute();
+        while ($personne = $requete->fetch(PDO::FETCH_OBJ)){
+            $listePersonnes[] = new Personne($personne);
+        }
+        $requete->closeCursor();
+        return $listePersonnes;
+    }
 
     ////////////////////////////////////////////////
     //
@@ -249,14 +265,5 @@ class PersonneManager {
 
         $retour=$requete->execute();
     }
-
-
-
-
-
-
-
-
-
 }
 ?>

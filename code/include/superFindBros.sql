@@ -42,18 +42,19 @@ CREATE TABLE IF NOT EXISTS `super_find_bros`.`jeu` (
   `jeu_annee` YEAR(4) NOT NULL,
   `jeu_editeur` VARCHAR(45) NOT NULL,
   `jeu_description` VARCHAR(500) NOT NULL,
+  `jeu_image` VARCHAR(256) NOT NULL,
   PRIMARY KEY (`jeu_num`))
 ENGINE = InnoDB;
 
-INSERT INTO `jeu` (`jeu_num`, `jeu_nom`, `jeu_annee`, `jeu_editeur`, `jeu_description`) VALUES
-(1,'Among Us',2018,'InnerSloth','Chaque joueur incarne un des membres de l''équipage d''un vaisseau spatial, chacun pouvant être soit un équipier, soit un imposteur'),
-(2,'Fall Guys: Ultimate Knockout',2020,'Devolver Digital','Jeu vidéo multijoueur fortement inspiré des jeux télévisés de course d''obstacles comme Takeshi Castle'),
-(3,'Super Smash Bros.',2018,'Nintendo','Jeu de combat multijoueur, crossover des différents univers de Nintendo'),
-(4,'Rocket League',2015,'Psyonix','Jeu vidéo de sport où les joueurs, conduisant des voitures, doivent frapper un ballon afin de marquer dans le but adverse. Les voitures sont équipées de boost et peuvent sauter, permettant de jouer le ballon dans les airs.'),
-(5,'Counter-Strike: Global Offensive',2012,'Valve Corporation','Les anti-terroristes et les terroristes s''affrontent dans différents modes de jeu avec une trentaine d''armes différentes, sans compter les grenades. Un mode entraînement permet aux joueurs de s''habituer aux commandes.'),
-(6,'Civilisation VI',2016,'2K Games','Comme pour les précédents jeux de la série Civilization, le joueur est convié à diriger une « civilisation » (en réalité une nation ou un empire) de ses humbles débuts de chasseurs-cueilleurs jusqu''à un avenir technologique caractérisé notamment par une course à l''exploration spatiale.'),
-(7,'League Of Legends',2009,'Riot Games','Le joueur contrôle un champion aux compétences uniques dont la puissance augmente au fil de la partie se battant contre une équipe de joueurs en temps réel la plupart du temps. L''objectif d''une partie est, dans la quasi-totalité des modes de jeu, de détruire le « Nexus » ennemi'),
-(8,'Animal Crossing: New Horizons',2020,'Nintendo','Abandonnés à eux-même sur une île perdue par Tom Nook dans le cadre d''un programme nommé "Formule Évasion", les joueurs font connaissance avec toutes sortes d''animaux avec lesquels ils peuvent sympathiser. Il faut ensuite s''établir en s''aidant des conseils d''un outil d''assistance (le NookPhone)');
+INSERT INTO `jeu` (`jeu_num`, `jeu_nom`, `jeu_annee`, `jeu_editeur`, `jeu_description`, `jeu_image`) VALUES
+(1,'Among Us',2018,'InnerSloth','Chaque joueur incarne un des membres de l''équipage d''un vaisseau spatial, chacun pouvant être soit un équipier, soit un imposteur', 'amongUs.png'),
+(2,'Fall Guys: Ultimate Knockout',2020,'Devolver Digital','Jeu vidéo multijoueur fortement inspiré des jeux télévisés de course d''obstacles comme Takeshi Castle', 'fallGuys.png'),
+(3,'Super Smash Bros.',2018,'Nintendo','Jeu de combat multijoueur, crossover des différents univers de Nintendo', 'superSmashBros.png'),
+(4,'Rocket League',2015,'Psyonix','Jeu vidéo de sport où les joueurs, conduisant des voitures, doivent frapper un ballon afin de marquer dans le but adverse. Les voitures sont équipées de boost et peuvent sauter, permettant de jouer le ballon dans les airs.', 'rocketLeague.jpg'),
+(5,'Counter-Strike: Global Offensive',2012,'Valve Corporation','Les anti-terroristes et les terroristes s''affrontent dans différents modes de jeu avec une trentaine d''armes différentes, sans compter les grenades. Un mode entraînement permet aux joueurs de s''habituer aux commandes.', 'csgo.png'),
+(6,'Civilisation VI',2016,'2K Games','Comme pour les précédents jeux de la série Civilization, le joueur est convié à diriger une « civilisation » (en réalité une nation ou un empire) de ses humbles débuts de chasseurs-cueilleurs jusqu''à un avenir technologique caractérisé notamment par une course à l''exploration spatiale.', 'civ6.png'),
+(7,'League Of Legends',2009,'Riot Games','Le joueur contrôle un champion aux compétences uniques dont la puissance augmente au fil de la partie se battant contre une équipe de joueurs en temps réel la plupart du temps. L''objectif d''une partie est, dans la quasi-totalité des modes de jeu, de détruire le « Nexus » ennemi', 'leagueOfLegends.png'),
+(8,'Animal Crossing: New Horizons',2020,'Nintendo','Abandonnés à eux-même sur une île perdue par Tom Nook dans le cadre d''un programme nommé "Formule Évasion", les joueurs font connaissance avec toutes sortes d''animaux avec lesquels ils peuvent sympathiser. Il faut ensuite s''établir en s''aidant des conseils d''un outil d''assistance (le NookPhone)', 'acnh.png');
 
 -- -----------------------------------------------------
 -- Table `super_find_bros`.`type`
