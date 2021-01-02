@@ -8,11 +8,40 @@ class JeuManager {
         $this->db = $db;
     }
 
+
     public function getJeuxFromPersonne($pernum) {
         $listeJeuxPossedes = array();
         $sql = 'SELECT p.jeu_num, jeu_nom, jeu_image FROM possede p
                 JOIN jeu j ON j.jeu_num = p.jeu_num
                 WHERE p.per_num = :per_num';
+        $requete = $this->db->prepare($sql);
+        $requete->bindValue(':per_num', $pernum, PDO::PARAM_INT);
+        $requete->execute();
+        while ($jeuPossede = $requete->fetch(PDO::FETCH_OBJ)) $listeJeuxPossedes[] = new Jeu($jeuPossede);
+        $requete->closeCursor();
+        return $listeJeuxPossedes;
+    }
+
+    public function afficherJeux($pernum) {
+        $listeJeuxPossedes = array();
+        $sql = 'SELECT p.jeu_num, jeu_nom, jeu_image, tempsdejeumoyen FROM possede p
+                JOIN jeu j ON j.jeu_num = p.jeu_num
+                WHERE p.per_num = :per_num';
+        $requete = $this->db->prepare($sql);
+        $requete->bindValue(':per_num', $pernum, PDO::PARAM_INT);
+        $requete->execute();
+        $listeJeuxPossedes = $requete->fetchAll();
+        $requete->closeCursor();
+        return $listeJeuxPossedes;
+    }
+
+    public function afficherJeuxNonPossedes($pernum) {
+        $listeJeuxPossedes = array();
+        $sql = 'SELECT jeu_num, jeu_nom, jeu_editeur, jeu_annee, jeu_description, jeu_image FROM jeu WHERE jeu_num NOT IN(
+                    SELECT p.jeu_num FROM possede p
+                    JOIN jeu j ON j.jeu_num = p.jeu_num
+                    WHERE p.per_num = :per_num
+                ) ORDER BY jeu_nom';
         $requete = $this->db->prepare($sql);
         $requete->bindValue(':per_num', $pernum, PDO::PARAM_INT);
         $requete->execute();

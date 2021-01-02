@@ -24,6 +24,7 @@
         <?php echo $title ?>
     </title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/style-responsive.css" />
     <link rel="stylesheet" type="text/css" href="css/userPart.css" />

@@ -1,4 +1,4 @@
-<h2 class="titre1"> Afficher les amis </h2>
+<h2 class="titre1">Vos amis </h2>
 
 
 <div id="rechercheAmi">

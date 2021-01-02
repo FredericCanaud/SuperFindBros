@@ -18,8 +18,8 @@
 
             $personnes = $personneManager->getPersonnesByJeu($jeu->getJeuNum(), $_SESSION["userId"]);
             ?>
-            <div class="jeuPersonnes">
-                <img src="img/jeux/<?php echo $jeu->getJeuImage() ?>" alt="<?php echo $jeu->getJeuNom() ?>" style="width:100%;">
+            <div class="jeux">
+                <img src="img/jeux/<?php echo $jeu->getJeuImage() ?>" alt="<?php echo $jeu->getJeuNom() ?>">
                 <h2>Personnes jouant à <?php echo $jeu->getJeuNom() ?></h2>
             </div>
             <ul class="grid">
