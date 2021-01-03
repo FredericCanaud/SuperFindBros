@@ -3,14 +3,9 @@
     if (empty($_SESSION['estConnecte'])){
         $_SESSION['estConnecte']=0;
     }
-    if (empty($_SESSION['userId'])){
-        $_SESSION['userId']=-1;
+    if (empty($_SESSION['userId'])) {
+        $_SESSION['userId'] = -1;
     }
-    /*
-    if (empty($_SESSION['etu'])){
-        $_SESSION['etu']=false;
-    }*/
-
 ?>
 
 <!doctype html>
@@ -27,14 +22,16 @@
     <link rel="stylesheet" type="text/css" href="css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/style-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="css/userPart.css" />
+    <?php if ($_SESSION['estConnecte'] >=1 || ($_SESSION['estConnecte'] >=0 && $_GET["page"] == 1)){
+        ?>
+        <link rel="stylesheet" type="text/css" href="css/userPart.css" />
+    <?php } ?>
     <link rel="shortcut icon" href="img/favicon.png">
-    <script src="js/function.js"></script>
 </head>
 <body>
 <?php
     // si on est connecté
-    if (($_SESSION['estConnecte']==1) || (!empty($_GET['page']))){
+    if (($_SESSION['estConnecte']==1) || (!empty($_GET['page'])) || ($_SESSION['estConnecte']==2)){
 ?>
     <div id="headerConnect">
         <div id="bandeLogo">

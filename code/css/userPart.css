@@ -1,4 +1,3 @@
-
 /*=========== header et nav pour les connectés ===============*/
 html{
     background: rgb(23,8,54);
@@ -452,14 +451,14 @@ h2{
 
 /*================ AFFICHER JEU ==================*/
 
-.afficherJeu .valid{
+#afficherJeu .valid{
     color: green;
     font-weight: 700;
     font-size: 18px;
     margin-left: 40%;
 }
 
-.afficherJeu .tableArrange{
+#afficherJeu .tableArrange{
     background-color: rgba(0, 0, 255, 0.2);
     border-color: #f0f0f0;
     border-width: 3px;
@@ -468,37 +467,37 @@ h2{
     margin-bottom: 2%;
 }
 
-.afficherJeu .tableArrange th{
+#afficherJeu .tableArrange th{
     height: 30px;
 }
 
-.afficherJeu .tableArrange td{
+#afficherJeu .tableArrange td{
     padding: 2%;
     vertical-align: middle;
 }
 
-.afficherJeu .tableArrange .jeux{
+#afficherJeu .tableArrange .jeux{
     display: flex;
     flex-wrap: wrap;
     justify-self: center;
 }
 
-.afficherJeu .tableArrange .jeux p{
+#afficherJeu .tableArrange .jeux p{
     margin: 10px 10px;
     font-weight: bolder;
 }
 
-.afficherJeu .tableArrange input[type=number]{
+#afficherJeu .tableArrange input[type=number]{
     width: 25%;
     min-width: 50px;
     max-width: 180px;
 }
 
-.afficherJeu .tableArrange td:last-child{
+#afficherJeu .tableArrange td:last-child{
     min-width: 150px;
 }
 
-.afficherJeuNonPossedes .tableArrange{
+#afficherJeuNonPossedes .tableArrange{
     background-color: rgba(0, 0, 255, 0.2);
     border-color: #f0f0f0;
     border-width: 3px;
@@ -507,38 +506,86 @@ h2{
     margin-bottom: 2%;
 }
 
-.afficherJeuNonPossedes .tableArrange th{
+#afficherJeuNonPossedes .tableArrange th{
     height: 30px;
 }
 
-.afficherJeuNonPossedes .tableArrange td{
+#afficherJeuNonPossedes .tableArrange td{
     padding: 3%;
     vertical-align: middle;
 }
 
-.afficherJeuNonPossedes .tableArrange .jeux{
+#afficherJeuNonPossedes .tableArrange .jeux{
     display: flex;
     flex-wrap: wrap;
     justify-self: center;
 }
 
-.afficherJeuNonPossedes .tableArrange .jeux p{
+#afficherJeuNonPossedes .tableArrange .jeux p{
     margin: 10px 10px;
 }
 
-.afficherJeuNonPossedes .tableArrange input[type=number]{
+#afficherJeuNonPossedes .tableArrange input[type=number]{
     width: 25%;
     min-width: 50px;
     max-width: 180px;
 }
 
-.afficherJeuNonPossedes .tableArrange td:first-child p{
+#afficherJeuNonPossedes .tableArrange td:first-child p{
     font-weight: 700;
 }
-.afficherJeuNonPossedes .tableArrange td:last-child, .afficherJeuNonPossedes .tableArrange td:nth-child(2){
+
+#afficherJeuNonPossedes .tableArrange td:last-child, #afficherJeuNonPossedes .tableArrange td:nth-child(2){
     min-width: 150px;
 }
 
-.afficherJeuNonPossedes .tableArrange td:nth-child(3){
+#afficherJeuNonPossedes .tableArrange td:nth-child(3){
     min-width: 75px;
+}
+
+/*================ ADMIN ==================*/
+
+#admin h2{
+    padding-bottom: 30px;
+}
+
+#admin img{
+    width: 64px;
+    height: 64px;
+}
+
+#admin .tableArrange{
+    background-color: rgba(0, 0, 255, 0.2);
+    border-color: #f0f0f0;
+    border-width: 3px;
+    border-style: solid;
+    width: 70%;
+    margin-bottom: 2%;
+}
+
+#admin td, #admin th{
+    padding: 5px;
+    padding-bottom: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#admin tr{
+    vertical-align: center;
+}
+#admin .deleteB{
+    width: 120px;
+    height: 40px;
+    padding: 0;
+    text-decoration: none;
+    background-color: #b13d3d;
+    border-radius: 20px;
+    color: #f0f0f0;
+}
+
+#admin .valid{
+    color: green;
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 40%;
 }

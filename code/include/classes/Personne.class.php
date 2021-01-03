@@ -12,6 +12,7 @@ class Personne
     private $per_pseudo;
     private $per_mdp;
     private $per_avatar;
+    private $per_admin;
 
     ////////////////// Constructeurs ////////////////
 
@@ -49,6 +50,9 @@ class Personne
                     break;
                 case 'per_avatar':
                     $this->setPerAvatar($valeur);
+                    break;
+                case 'per_admin':
+                    $this->setPerAdmin($valeur);
                     break;
             }
         }
@@ -88,6 +92,10 @@ class Personne
     {
         return $this->per_avatar;
     }
+    public function getPerAdmin()
+    {
+        return $this->per_admin;
+    }
 
     ////////////////////// Setters //////////////////////
 
@@ -122,6 +130,10 @@ class Personne
     public function setPerAvatar($per_avatar)
     {
         $this->per_avatar = $per_avatar;
+    }
+    public function setPerAdmin($per_admin)
+    {
+        $this->per_admin = $per_admin;
     }
 }
 ?>

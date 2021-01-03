@@ -23,5 +23,18 @@ class JoueManager {
         $requete->closeCursor();
         return $listeJeuxGroupes;
     }
+
+    ////////////////////////////////////////////////
+    //
+    // Fonction qui supprime un jeu de la table Joue
+    //
+    ////////////////////////////////////////////////
+    public function supprimerJeu($jeu_num)
+    {
+        $sql = 'DELETE FROM joue WHERE jeu_num = :jeu_num';
+        $requete = $this->db->prepare($sql);
+        $requete->bindValue(':jeu_num', $jeu_num, PDO::PARAM_INT);
+        $requete->execute();
+    }
 }
 ?>

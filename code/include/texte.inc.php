@@ -16,9 +16,12 @@
     switch ($page) {
 
         case 0:
-            if ($connec==1||$connec==2) {
+            if ($connec==1) {
                 // inclure ici la page d'accueil des connectés
                 include_once('pages/accueilConnecte.inc.php');
+            }else if ($connec==2){
+                // inclure ici la page d'accueil de l'admin
+                include_once('pages/accueilAdmin.inc.php');
             }else{
                 // inclure ici la page d'accueil des non connectés
                 include_once('pages/accueil.inc.php');

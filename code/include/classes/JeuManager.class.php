@@ -8,6 +8,22 @@ class JeuManager {
         $this->db = $db;
     }
 
+    ////////////////////////////////////////////////
+    //
+    // Fonction qui retourne tous les jeux de la BD
+    //
+    ////////////////////////////////////////////////
+    public function getAllJeux(){
+        $listeJeux = array();
+        $sql = 'SELECT jeu_num, jeu_nom, jeu_editeur, jeu_annee, jeu_description, jeu_image FROM jeu';
+        $requete = $this->db->prepare($sql);
+        $requete->execute();
+        while ($jeu = $requete->fetch(PDO::FETCH_OBJ)){
+            $listeJeux[] = new Jeu($jeu);
+        }
+        $requete->closeCursor();
+        return $listeJeux;
+    }
 
     public function getJeuxFromPersonne($pernum) {
         $listeJeuxPossedes = array();
@@ -65,5 +81,17 @@ class JeuManager {
         return $listeJeux;
     }
 
+    ////////////////////////////////////////////////
+    //
+    // Fonction qui supprime un jeu de la table Jeu
+    //
+    ////////////////////////////////////////////////
+    public function supprimerJeu($jeu_num)
+    {
+        $sql = 'DELETE FROM jeu WHERE jeu_num = :jeu_num';
+        $requete = $this->db->prepare($sql);
+        $requete->bindValue(':jeu_num', $jeu_num, PDO::PARAM_INT);
+        $requete->execute();
+    }
 }
 ?>

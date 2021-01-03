@@ -32,14 +32,17 @@ if ((empty($_POST["mail"])) || (empty($_POST["mdp"]))){
     $pwd = $_POST["mdp"];
 
     $mdpVerif = sha1(sha1($pwd).$salt);
-    // le mdp de Bob@gmail.com est lemdp
 
     $mdp = $personneManager->getMdpParMail($_POST["mail"]);
 
     if ($mdp){
         if ($mdpVerif == $mdp){
-            $_SESSION["estConnecte"] = 1;
             $_SESSION['userId'] = $personneManager->getIdParMail($_POST["mail"]);
+            if($personneManager->getPersonneParId($_SESSION["userId"])->getPerAdmin()){
+                $_SESSION["estConnecte"] = 2;
+            } else {
+                $_SESSION["estConnecte"] = 1;
+            }
             header( "refresh:2;url=?page=0" );
             ?>
             <p class="valid"> Authentification réussie </p>

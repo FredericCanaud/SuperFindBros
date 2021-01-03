@@ -23,5 +23,18 @@ class AppartientManager {
         $requete->closeCursor();
         return $listeMembres;
     }
+
+    ////////////////////////////////////////////////
+    //
+    // Fonction qui supprime une personne de la table Appartient
+    //
+    ////////////////////////////////////////////////
+    public function supprimerPersonne($per_num)
+    {
+        $sql = 'DELETE FROM appartient WHERE per_num = :per_num';
+        $requete = $this->db->prepare($sql);
+        $requete->bindValue(':per_num', $per_num, PDO::PARAM_INT);
+        $requete->execute();
+    }
 }
 ?>

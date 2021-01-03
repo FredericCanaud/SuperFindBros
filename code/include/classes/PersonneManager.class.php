@@ -13,10 +13,32 @@ class PersonneManager {
     // Fonction qui retourne tous les personnes de la BD
     //
     ////////////////////////////////////////////////
-
-    public function getPersonnesAleatoires() {
+    public function getAllPersonnes(){
         $listePersonnes = array();
-        $sql = 'SELECT per_num, per_pseudo, per_age, per_avatar FROM personne
+        $sql = 'SELECT per_num, per_nom, per_prenom, per_pseudo, per_age, per_mail, per_avatar FROM personne 
+                WHERE per_admin NOT IN(
+                    SELECT per_admin FROM personne WHERE per_admin = TRUE
+                )';
+        $requete = $this->db->prepare($sql);
+        $requete->execute();
+        while ($personne = $requete->fetch(PDO::FETCH_OBJ)){
+            $listePersonnes[] = new Personne($personne);
+        }
+        $requete->closeCursor();
+        return $listePersonnes;
+    }
+
+    ////////////////////////////////////////////////
+    //
+    // Fonction qui retourne des personnes aléatoires de la BD
+    //
+    ////////////////////////////////////////////////
+    public function getPersonnesAleatoires(){
+        $listePersonnes = array();
+        $sql = 'SELECT per_num, per_pseudo, per_age, per_avatar FROM personne 
+                WHERE per_admin NOT IN(
+                    SELECT per_admin FROM personne WHERE per_admin = TRUE
+                )
                 ORDER BY RAND() LIMIT 6';
         $requete = $this->db->prepare($sql);
         $requete->execute();
@@ -51,7 +73,7 @@ class PersonneManager {
     ////////////////////////////////////////////////
 
     public function getPersonneParId($id) {
-        $sql = 'SELECT per_num, per_nom, per_prenom, per_age, per_mail, per_pseudo FROM personne
+        $sql = 'SELECT per_num, per_nom, per_prenom, per_age, per_mail, per_pseudo, per_admin FROM personne
                 where per_num=:id';
 
         $requete = $this->db->prepare($sql);
@@ -74,8 +96,8 @@ class PersonneManager {
     public function ajouterPersonne($personne) {
         $salt = "48@!alsd";
         $hash = sha1(sha1($personne["per_mdp"]).$salt);
-        $sql = 'INSERT INTO personne(per_prenom, per_nom, per_age, per_mail, per_pseudo, per_mdp, per_avatar) VALUES(:per_prenom, 
-                :per_nom, :per_age, :per_mail, :per_pseudo, :per_mdp, :per_avatar)';
+        $sql = 'INSERT INTO personne(per_prenom, per_nom, per_age, per_mail, per_pseudo, per_mdp, per_avatar, per_admin) VALUES(:per_prenom, 
+                :per_nom, :per_age, :per_mail, :per_pseudo, :per_mdp, :per_avatar, FALSE)';
 
         $requete = $this->db->prepare($sql);
         $requete->bindValue(':per_prenom', $personne["per_prenom"], PDO::PARAM_STR);
@@ -102,8 +124,8 @@ class PersonneManager {
     ////////////////////////////////////////////////
 
     public function getMdpParMail($mail){
-        $sql = 'select per_mdp from personne
-                    where per_mail= :mail';
+        $sql = 'SELECT per_mdp FROM personne
+                    WHERE per_mail= :mail';
 
         $requete = $this->db->prepare($sql);
         $requete->bindValue(':mail', $mail, PDO::PARAM_STR);
@@ -128,8 +150,8 @@ class PersonneManager {
     ////////////////////////////////////////////////
 
     public function getIdParMail($mail){
-        $sql = 'select per_num from personne
-                    where per_mail=:mail';
+        $sql = 'SELECT per_num FROM personne
+                    WHERE per_mail=:mail';
 
         $requete = $this->db->prepare($sql);
         $requete->bindValue(':mail', $mail, PDO::PARAM_STR);
@@ -154,8 +176,8 @@ class PersonneManager {
     ////////////////////////////////////////////////
 
     public function getIdParPseudo($pseudo){
-        $sql = 'select per_num from personne
-                    where per_pseudo=:pseudo';
+        $sql = 'SELECT per_num FROM personne
+                    WHERE per_pseudo=:pseudo';
 
         $requete = $this->db->prepare($sql);
         $requete->bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
@@ -192,6 +214,18 @@ class PersonneManager {
         }
     }
 
+    ////////////////////////////////////////////////
+    //
+    // Fonction qui supprime une personne de la table Personne
+    //
+    ////////////////////////////////////////////////
+    public function supprimerPersonne($per_num)
+    {
+        $sql = 'DELETE FROM personne WHERE per_num = :per_num';
+        $requete = $this->db->prepare($sql);
+        $requete->bindValue(':per_num', $per_num, PDO::PARAM_INT);
+        $requete->execute();
+    }
 
     ////////////////////////////////////////////////
     //
@@ -201,69 +235,71 @@ class PersonneManager {
 
 
     public function setNom($id,$valeur){
-        $sql = 'update personne set per_nom=:valeur where per_num=:id';
+        $sql = 'UPDATE personne SET per_nom=:valeur WHERE per_num=:id';
 
         $requete = $this->db->prepare($sql);
 
         $requete->bindValue(':id',$id);
         $requete->bindValue(':valeur',$valeur);
 
-        $retour=$requete->execute();
+        $requete->execute();
     }
 
     public function setPrenom($id,$valeur){
-        $sql = 'update personne set per_prenom=:valeur where per_num=:id';
+        $sql = 'UPDATE personne SET per_prenom=:valeur WHERE per_num=:id';
 
         $requete = $this->db->prepare($sql);
 
         $requete->bindValue(':id',$id);
         $requete->bindValue(':valeur',$valeur);
 
-        $retour=$requete->execute();
+        $requete->execute();
     }
 
     public function setPseudo($id,$valeur){
-        $sql = 'update personne set per_pseudo=:valeur where per_num=:id';
+        $sql = 'UPDATE personne SET per_pseudo=:valeur WHERE per_num=:id';
 
         $requete = $this->db->prepare($sql);
 
         $requete->bindValue(':id',$id);
         $requete->bindValue(':valeur',$valeur);
 
-        $retour=$requete->execute();
+        $requete->execute();
     }
 
     public function setAge($id,$valeur){
-        $sql = 'update personne set per_age=:valeur where per_num=:id';
+        $sql = 'UPDATE personne SET per_age=:valeur WHERE per_num=:id';
 
         $requete = $this->db->prepare($sql);
 
         $requete->bindValue(':id',$id);
         $requete->bindValue(':valeur',$valeur);
 
-        $retour=$requete->execute();
+        $requete->execute();
     }
 
     public function setMail($id,$valeur){
-        $sql = 'update personne set per_mail=:valeur where per_num=:id';
+        $sql = 'UPDATE personne SET per_mail=:valeur WHERE per_num=:id';
 
         $requete = $this->db->prepare($sql);
 
         $requete->bindValue(':id',$id);
         $requete->bindValue(':valeur',$valeur);
 
-        $retour=$requete->execute();
+        $requete->execute();
     }
 
     public function setMdp($id,$valeur){
-        $sql = 'update personne set per_mdp=:valeur where per_num=:id';
+        $sql = 'UPDATE personne SET per_mdp=:valeur where per_num=:id';
 
         $requete = $this->db->prepare($sql);
 
         $requete->bindValue(':id',$id);
         $requete->bindValue(':valeur',$valeur);
 
-        $retour=$requete->execute();
+        $requete->execute();
     }
+
+
 }
 ?>

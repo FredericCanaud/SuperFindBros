@@ -65,17 +65,15 @@ class AmiManager{
         $sql = 'INSERT INTO ami (per_num, per_pernum) VALUES (:id, :idAmi);';
 
         $requete = $this->db->prepare($sql);
-
         $requete->bindValue(':id',$id);
         $requete->bindValue(':idAmi',$idAmi);
-
         $requete->execute();
     }
 
 
     ////////////////////////////////////////////////
     //
-    // Comme une tablette de chocolat, certaines relation ne sont pas faites pour durée...
+    // Comme une tablette de chocolat, certaines relation ne sont pas faites pour durer...
     //
     ////////////////////////////////////////////////
 
@@ -83,11 +81,22 @@ class AmiManager{
         $sql = 'delete from ami where (per_num=:id and per_pernum=:idAmi) or (per_num=:idAmi and per_pernum=:id)';
 
         $requete = $this->db->prepare($sql);
-
         $requete->bindValue(':id',$id);
         $requete->bindValue(':idAmi',$idAmi);
+        $requete->execute();
+    }
 
-        $retour=$requete->execute();
+    ////////////////////////////////////////////////
+    //
+    // Fonction qui supprime une personne de la table Ami
+    //
+    ////////////////////////////////////////////////
+    public function supprimerPersonne($per_num)
+    {
+        $sql = 'DELETE FROM ami WHERE per_num = :per_num OR per_pernum = :per_num';
+        $requete = $this->db->prepare($sql);
+        $requete->bindValue(':per_num', $per_num, PDO::PARAM_INT);
+        $requete->execute();
     }
 }
 ?>

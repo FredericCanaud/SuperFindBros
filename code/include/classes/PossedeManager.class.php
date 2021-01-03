@@ -45,5 +45,31 @@ class PossedeManager {
         $requete->bindValue(':temps', $temps, PDO::PARAM_INT);
         $requete->execute();
     }
+
+    ////////////////////////////////////////////////
+    //
+    // Fonction qui supprime une personne de la table Possede
+    //
+    ////////////////////////////////////////////////
+    public function supprimerPersonne($per_num)
+    {
+        $sql = 'DELETE FROM possede WHERE per_num = :per_num';
+        $requete = $this->db->prepare($sql);
+        $requete->bindValue(':per_num', $per_num, PDO::PARAM_INT);
+        $requete->execute();
+    }
+
+    ////////////////////////////////////////////////
+    //
+    // Fonction qui supprime un jeu de la table Possede
+    //
+    ////////////////////////////////////////////////
+    public function supprimerJeu($jeu_num)
+    {
+        $sql = 'DELETE FROM possede WHERE jeu_num = :jeu_num';
+        $requete = $this->db->prepare($sql);
+        $requete->bindValue(':jeu_num', $jeu_num, PDO::PARAM_INT);
+        $requete->execute();
+    }
 }
 ?>
