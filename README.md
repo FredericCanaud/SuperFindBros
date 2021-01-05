@@ -4,7 +4,7 @@
 Super Find Bros. est une site de rencontres pour joueurs, afin de permettre aux joueurs de pouvoir se rencontrer et partager ensemble des ondes positives !
 </p>
 <p align="center" width="100%">
-    <img width="66%" src="code/img/logo.png" alt="Logo"> <br>
+    <img width="143" height="186" src="code/img/logo.png" alt="Logo"> <br>
 </p>
 
 <p align="center" width="100%">
