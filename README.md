@@ -1,22 +1,48 @@
-# Réalisation d'un site de rencontre pour le projet Techno Web
+<h1 align="center">  Super Find Bros. </h1> 
 
-## Membres du projet
+<p align="center" width="100%">
+Super Find Bros. est une site de rencontres pour joueurs, afin de permettre aux joueurs de pouvoir se rencontrer et partager ensemble des ondes positives !
+</p>
+<p align="center" width="100%">
+    <img width="66%" src="code/img/logo.png" alt="Logo"> <br>
+</p>
+
+<p align="center" width="100%">
+    <img width="80%" src="code/img/background/accueil.jpg" alt="Accueil"> <br>
+</p>
+
+> ## Membres du projet
 - Thomas CAMPREDON
-- Frederic CANAUD
+- Frédéric CANAUD
 
-## Utilitaires
-- php
-- wamp
-- git
-- PHP Storm
-- Visual studio code
-- PHPMyAdmin
+> ## Utilitaires
+- WAMP
+- Git
+- PHPStorm
 
-## Sujet
-Sur la base du sujet 1 proposé dans le cadre du projet de technoWeb, nous avons choisi de modifier un peu l'énoncé en partant sur un site de rencontre e-sportive.
-Le nom du site sera SuperFindBros.
+> ## Fonctionnalités techniques développées
 
+### PHP
+- Utilisation de PDO (PHP Orienté Objet)
+- Mise en place d’une architecture MVC (Classes normales pour
+les modèles, classes managers pour les contrôleurs, pages
+pour les vues)
+- Inclusion de parties de pages suivant les interfaces
+- Structures itératives utilisant des objets
+- Gestion dynamique des saisies de mot de passe
+- Utilisation privilégiée des balises sémantiques d’HTML5
 
+### CSS
+- Développement focalisé sur l’affichage mobile
+- Media queries afin d’adapter le contenu d’une page vers un
+écran plus grand (Petite tablette, puis tablette, puis petit écran
+d’ordinateur)
+- Ajout de polices personnalisées (Lato)
+- Déplacements dynamiques de containers, et transitions
+- Utilisation variée des différentes propriétés offertes par CSS3
 
-## Liens utiles
-[Sujet de base](https://community-sciences.unilim.fr/pluginfile.php/69703/mod_resource/content/2/Projet__1.pdf)
+### SQL
+- Mise en place d’une base de données SQL
+- Requêtes avec jointures externes
+- Requêtes avec exclusion de données
+- Requêtes dynamiques avec jQuery
