@@ -1,7 +1,7 @@
 <h1 align="center">  Super Find Bros. </h1> 
 
 <p align="center" width="100%">
-Super Find Bros. est une site de rencontres pour joueurs, afin de permettre aux joueurs de pouvoir se rencontrer et partager ensemble des ondes positives !
+Super Find Bros. est un site de rencontres pour joueurs, afin de permettre aux joueurs de pouvoir se rencontrer et partager ensemble des ondes positives !
 </p>
 <p align="center" width="100%">
     <img width="143" height="186" src="code/img/logo.png" alt="Logo"> <br>
